@@ -1,25 +1,238 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="td8-37-QmV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Lists-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ListListTableViewController" customModule="FreeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="TTy-AM-ewa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listListTableViewCell" rowHeight="90" id="LLL-Qb-Pcs" customClass="ListListTableViewCell" customModule="FreeMe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LLL-Qb-Pcs" id="AJ0-Zh-9US">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujk-xh-hB6">
+                                            <rect key="frame" x="18" y="8" width="102" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.32549019607843138" green="0.6588235294117647" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Number of Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2M-jQ-gsA">
+                                            <rect key="frame" x="18" y="30" width="185" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.40392156862745099" green="0.396078431372549" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Modification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMi-gr-K8h">
+                                            <rect key="frame" x="18" y="54" width="179" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.53333333333333333" green="0.52941176470588236" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="listModificationTimeLabel" destination="zMi-gr-K8h" id="X1g-I1-P3C"/>
+                                    <outlet property="listNumberOfItemsLabel" destination="C2M-jQ-gsA" id="dPu-KA-6ZX"/>
+                                    <outlet property="listTitleLabel" destination="ujk-xh-hB6" id="6Lo-9r-1uh"/>
+                                    <segue destination="GFv-10-ojh" kind="show" identifier="displayList" id="pvG-Y2-Vru"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lists" id="S1P-0A-heA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Hh-5g-XUx">
+                            <connections>
+                                <segue destination="GFv-10-ojh" kind="show" identifier="addList" id="Mab-wT-twH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1100" y="321"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="pu1-3M-3o4">
+            <objects>
+                <viewController id="GFv-10-ojh" customClass="DisplayListViewController" customModule="FreeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tof-H3-AY7"/>
+                        <viewControllerLayoutGuide type="bottom" id="CzK-or-1Yc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V2B-vi-zNy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter list title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZ0-LT-P7r">
+                                <rect key="frame" x="20" y="72" width="573" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNZ-03-nES">
+                                <rect key="frame" x="20" y="188" width="573" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uPD-kA-83S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TUN-OG-AYQ">
+                                <rect key="frame" x="20" y="233" width="573" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iSU-45-uk5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cv4-WZ-6vI">
+                                <rect key="frame" x="20" y="278" width="573" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QGY-IU-wzZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item 4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TCt-l1-XWT">
+                                <rect key="frame" x="20" y="326" width="573" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qNc-Hb-LVM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter item 5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n7X-i6-2cE">
+                                <rect key="frame" x="20" y="375" width="573" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="btb-Sa-2IL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Lg-EE-9Tb">
+                                <rect key="frame" x="20" y="144" width="573" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="5Ut-jq-MDT"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="soda"/>
+                                    <segment title="" image="cupcake"/>
+                                    <segment title="" image="can"/>
+                                    <segment title="" image="milk-box"/>
+                                    <segment title="" image="oven-mitt"/>
+                                    <segment title="" image="frozen-food"/>
+                                    <segment title="" image="meat-1"/>
+                                    <segment title="" image="watermelon"/>
+                                    <segment title="" image="cleaning-spray-silhouette"/>
+                                    <segment title="" image="paper-roll"/>
+                                    <segment title="" image="bathtub"/>
+                                    <segment title="" image="mother-changing-baby-clothes"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4W3-FA-jsv">
+                                <rect key="frame" x="263" y="431" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="aa1-Mx-gA7"/>
+                                    <constraint firstAttribute="height" constant="30" id="iBB-Pf-Ijm"/>
+                                </constraints>
+                                <state key="normal" title="Add items"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Lg-EE-9Tb" firstAttribute="trailing" secondItem="VNZ-03-nES" secondAttribute="trailing" id="3RW-Ll-jc0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aZ0-LT-P7r" secondAttribute="trailing" constant="-13" id="4kB-AC-18E"/>
+                            <constraint firstItem="Cv4-WZ-6vI" firstAttribute="trailing" secondItem="TCt-l1-XWT" secondAttribute="trailing" id="5X3-Mz-Tpk"/>
+                            <constraint firstItem="TCt-l1-XWT" firstAttribute="top" secondItem="Cv4-WZ-6vI" secondAttribute="bottom" constant="18" id="ABP-uk-POz"/>
+                            <constraint firstItem="VNZ-03-nES" firstAttribute="top" secondItem="1Lg-EE-9Tb" secondAttribute="bottom" constant="16" id="GlB-XF-9F0"/>
+                            <constraint firstItem="aZ0-LT-P7r" firstAttribute="leading" secondItem="1Lg-EE-9Tb" secondAttribute="leading" id="KNl-NP-Ej4"/>
+                            <constraint firstItem="Cv4-WZ-6vI" firstAttribute="leading" secondItem="TCt-l1-XWT" secondAttribute="leading" id="KfG-nA-Rdl"/>
+                            <constraint firstItem="1Lg-EE-9Tb" firstAttribute="leading" secondItem="VNZ-03-nES" secondAttribute="leading" id="NMe-BG-jgk"/>
+                            <constraint firstItem="TCt-l1-XWT" firstAttribute="leading" secondItem="n7X-i6-2cE" secondAttribute="leading" id="OTM-Zq-Odb"/>
+                            <constraint firstItem="CzK-or-1Yc" firstAttribute="top" secondItem="4W3-FA-jsv" secondAttribute="bottom" constant="139" id="P3g-Pw-6ah"/>
+                            <constraint firstItem="n7X-i6-2cE" firstAttribute="centerX" secondItem="4W3-FA-jsv" secondAttribute="centerX" id="Sgh-Lz-TWA"/>
+                            <constraint firstItem="Cv4-WZ-6vI" firstAttribute="top" secondItem="TUN-OG-AYQ" secondAttribute="bottom" constant="15" id="XOK-b9-Uiz"/>
+                            <constraint firstItem="n7X-i6-2cE" firstAttribute="top" secondItem="TCt-l1-XWT" secondAttribute="bottom" constant="19" id="YlS-PX-XQM"/>
+                            <constraint firstItem="1Lg-EE-9Tb" firstAttribute="top" secondItem="aZ0-LT-P7r" secondAttribute="bottom" constant="19" id="bAz-w5-L9l"/>
+                            <constraint firstItem="TUN-OG-AYQ" firstAttribute="trailing" secondItem="Cv4-WZ-6vI" secondAttribute="trailing" id="bfQ-oR-sVb"/>
+                            <constraint firstItem="aZ0-LT-P7r" firstAttribute="top" secondItem="tof-H3-AY7" secondAttribute="bottom" constant="8" symbolic="YES" id="cyz-cm-NOp"/>
+                            <constraint firstItem="TUN-OG-AYQ" firstAttribute="leading" secondItem="Cv4-WZ-6vI" secondAttribute="leading" id="dET-yE-uaQ"/>
+                            <constraint firstItem="TUN-OG-AYQ" firstAttribute="top" secondItem="VNZ-03-nES" secondAttribute="bottom" constant="15" id="iDF-Nw-XL8"/>
+                            <constraint firstItem="TCt-l1-XWT" firstAttribute="trailing" secondItem="n7X-i6-2cE" secondAttribute="trailing" id="jzR-KN-vW9"/>
+                            <constraint firstItem="aZ0-LT-P7r" firstAttribute="leading" secondItem="V2B-vi-zNy" secondAttribute="leadingMargin" id="kRY-8A-PeD"/>
+                            <constraint firstItem="4W3-FA-jsv" firstAttribute="top" secondItem="n7X-i6-2cE" secondAttribute="bottom" constant="26" id="l8N-ie-uBc"/>
+                            <constraint firstItem="aZ0-LT-P7r" firstAttribute="trailing" secondItem="1Lg-EE-9Tb" secondAttribute="trailing" id="meF-4b-a6o"/>
+                            <constraint firstItem="VNZ-03-nES" firstAttribute="trailing" secondItem="TUN-OG-AYQ" secondAttribute="trailing" id="uGJ-Ws-CGO"/>
+                            <constraint firstItem="VNZ-03-nES" firstAttribute="leading" secondItem="TUN-OG-AYQ" secondAttribute="leading" id="veG-n4-fWq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="kSb-6i-qIV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xPK-yN-hVj">
+                            <connections>
+                                <segue destination="Spv-ot-Ys0" kind="unwind" identifier="Save" unwindAction="unwindToListListViewController:" id="Lu2-R0-f1b"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EEo-ei-hO7">
+                            <connections>
+                                <segue destination="Spv-ot-Ys0" kind="unwind" identifier="Cancel" unwindAction="unwindToListListViewController:" id="W0l-2T-D9b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="listItemTextField" destination="VNZ-03-nES" id="cu2-pS-2g1"/>
+                        <outlet property="listTitleTextField" destination="aZ0-LT-P7r" id="FQm-fs-S4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1nH-Ej-DTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Spv-ot-Ys0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1800" y="321"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xM7-jw-cCv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="td8-37-QmV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oLi-Kq-vyK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qDs-dz-VLw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mmr-cw-PGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="321"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bathtub" width="24" height="24"/>
+        <image name="can" width="24" height="24"/>
+        <image name="cleaning-spray-silhouette" width="24" height="24"/>
+        <image name="cupcake" width="24" height="24"/>
+        <image name="frozen-food" width="24" height="24"/>
+        <image name="meat-1" width="24" height="24"/>
+        <image name="milk-box" width="24" height="24"/>
+        <image name="mother-changing-baby-clothes" width="24" height="24"/>
+        <image name="oven-mitt" width="24" height="24"/>
+        <image name="paper-roll" width="24" height="24"/>
+        <image name="soda" width="24" height="24"/>
+        <image name="watermelon" width="24" height="24"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Mab-wT-twH"/>
+    </inferredMetricsTieBreakers>
 </document>
