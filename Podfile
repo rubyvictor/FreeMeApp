@@ -7,5 +7,7 @@ target 'FreeMe' do
 
   # Pods for FreeMe
 pod 'RealmSwift'
+pod 'Parse'
+pod 'ParseUI'
 
 end

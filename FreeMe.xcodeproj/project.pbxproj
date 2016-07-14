@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		45156C8D6842BF2444BB3F1C /* Pods_FreeMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C30D4486FE64A2BA1CD1FD2 /* Pods_FreeMe.framework */; };
+		B1067A781D37CAB2006A2375 /* DisplayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1067A771D37CAB2006A2375 /* DisplayListViewController.swift */; };
+		B1067A7A1D37CC39006A2375 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1067A791D37CC39006A2375 /* ItemTableViewCell.swift */; };
+		B1067A7D1D37E650006A2375 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1067A7C1D37E650006A2375 /* NewItemViewController.swift */; };
+		B1067A7F1D37E751006A2375 /* CategoryCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1067A7E1D37E751006A2375 /* CategoryCVCell.swift */; };
 		B1090D4E1D336E7000EBD7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D4D1D336E7000EBD7F6 /* AppDelegate.swift */; };
 		B1090D501D336E7000EBD7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D4F1D336E7000EBD7F6 /* ViewController.swift */; };
 		B1090D531D336E7000EBD7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1090D511D336E7000EBD7F6 /* Main.storyboard */; };
@@ -17,14 +21,19 @@
 		B1090D6D1D339F2E00EBD7F6 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D6C1D339F2E00EBD7F6 /* RealmHelper.swift */; };
 		B10A7B171D354F34002DD376 /* NSDate+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A7B161D354F34002DD376 /* NSDate+convertToString.swift */; };
 		B11E282D1D34914700C88663 /* ListListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E282C1D34914700C88663 /* ListListTableViewController.swift */; };
-		B11E282F1D34945900C88663 /* DisplayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E282E1D34945900C88663 /* DisplayListViewController.swift */; };
 		B11E28321D34A5DC00C88663 /* ListListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E28311D34A5DC00C88663 /* ListListTableViewCell.swift */; };
+		B16106721D3771D50072CF87 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16106711D3771D50072CF87 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		136C3DF35DA09A699232D38F /* Pods-FreeMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMe/Pods-FreeMe.debug.xcconfig"; sourceTree = "<group>"; };
 		7C30D4486FE64A2BA1CD1FD2 /* Pods_FreeMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		874D0FBA6F7FFB3BD1DC6D5B /* Pods-FreeMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMe/Pods-FreeMe.release.xcconfig"; sourceTree = "<group>"; };
+		B1067A771D37CAB2006A2375 /* DisplayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayListViewController.swift; sourceTree = "<group>"; };
+		B1067A791D37CC39006A2375 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		B1067A7B1D37D7B7006A2375 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		B1067A7C1D37E650006A2375 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		B1067A7E1D37E751006A2375 /* CategoryCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCVCell.swift; sourceTree = "<group>"; };
 		B1090D4A1D336E7000EBD7F6 /* FreeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1090D4D1D336E7000EBD7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1090D4F1D336E7000EBD7F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,8 +45,8 @@
 		B1090D6C1D339F2E00EBD7F6 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		B10A7B161D354F34002DD376 /* NSDate+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+convertToString.swift"; sourceTree = "<group>"; };
 		B11E282C1D34914700C88663 /* ListListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListListTableViewController.swift; path = ../ListListTableViewController.swift; sourceTree = "<group>"; };
-		B11E282E1D34945900C88663 /* DisplayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayListViewController.swift; path = ../DisplayListViewController.swift; sourceTree = "<group>"; };
 		B11E28311D34A5DC00C88663 /* ListListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListListTableViewCell.swift; sourceTree = "<group>"; };
+		B16106711D3771D50072CF87 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +82,7 @@
 		B1090D4C1D336E7000EBD7F6 /* FreeMe */ = {
 			isa = PBXGroup;
 			children = (
+				B1067A7B1D37D7B7006A2375 /* Podfile */,
 				B10A7B151D354EFA002DD376 /* Extensions */,
 				B10A7B141D3524B7002DD376 /* Model */,
 				B10A7B131D35245C002DD376 /* Controllers */,
@@ -100,7 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				B11E282C1D34914700C88663 /* ListListTableViewController.swift */,
-				B11E282E1D34945900C88663 /* DisplayListViewController.swift */,
+				B1067A771D37CAB2006A2375 /* DisplayListViewController.swift */,
+				B1067A7C1D37E650006A2375 /* NewItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B1090D5F1D3387BF00EBD7F6 /* List.swift */,
+				B16106711D3771D50072CF87 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				B11E28311D34A5DC00C88663 /* ListListTableViewCell.swift */,
+				B1067A791D37CC39006A2375 /* ItemTableViewCell.swift */,
+				B1067A7E1D37E751006A2375 /* CategoryCVCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,13 +284,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1090D501D336E7000EBD7F6 /* ViewController.swift in Sources */,
+				B16106721D3771D50072CF87 /* Item.swift in Sources */,
+				B1067A7A1D37CC39006A2375 /* ItemTableViewCell.swift in Sources */,
 				B11E282D1D34914700C88663 /* ListListTableViewController.swift in Sources */,
 				B1090D6D1D339F2E00EBD7F6 /* RealmHelper.swift in Sources */,
 				B11E28321D34A5DC00C88663 /* ListListTableViewCell.swift in Sources */,
+				B1067A7F1D37E751006A2375 /* CategoryCVCell.swift in Sources */,
+				B1067A781D37CAB2006A2375 /* DisplayListViewController.swift in Sources */,
+				B1067A7D1D37E650006A2375 /* NewItemViewController.swift in Sources */,
 				B10A7B171D354F34002DD376 /* NSDate+convertToString.swift in Sources */,
 				B1090D4E1D336E7000EBD7F6 /* AppDelegate.swift in Sources */,
 				B1090D601D3387BF00EBD7F6 /* List.swift in Sources */,
-				B11E282F1D34945900C88663 /* DisplayListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

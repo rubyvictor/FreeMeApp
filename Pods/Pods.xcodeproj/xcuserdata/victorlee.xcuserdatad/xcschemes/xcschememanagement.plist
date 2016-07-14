@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ParseUI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FreeMe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>985A3D1D2D4AF131E44F30BB38BDE929</key>
+		<key>138B79DA67AEE3FC3CC7AA7228B9EF61</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9BDCFACBBF3315D5F06A7B357EE7AEE6</key>
+		<key>2C8AA1BAF35413BDB954A1DF93576ED1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC10A23FA833A02093C176878A981B68</key>
+		<key>6C035D24234FB8B41A097D9C7D0B49D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96F6FC5F8BB76FEE9B0AA36468984709</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B272B33F162D6E5C3510BA50ECF2684B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1F78B1C5F8F2CCD0E68552EAF2B9B52</key>
 		<dict>
 			<key>primary</key>
 			<true/>

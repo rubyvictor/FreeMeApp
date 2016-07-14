@@ -12,16 +12,23 @@ import RealmSwift
 
 class ListListTableViewController: UITableViewController {
     
-    var lists: Results<List>! {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
+    var lists: [List] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lists = RealmHelper.retrieveList()
+        
+        let list1 = List()
+        
+        let item1 = Item(name: "Milk", itemState: false, itemCategory: .Bakery, quantity:2)
+        list1.arrayOfItems.append(item1)
+        let item2 = Item(name: "bread", itemState: false, itemCategory: .Bakery, quantity:4)
+        list1.arrayOfItems.append(item2)
+        
+        list1.title = "Buy groceries or else...."
+        
+        self.lists.append(list1)
+        
+        self.tableView.reloadData()
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,8 +48,10 @@ class ListListTableViewController: UITableViewController {
         
         return cell
     }
+    
     //show segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if let identifier = segue.identifier {
             if identifier == "displayList"{
                 print("Table view cell tapped")
@@ -66,9 +75,7 @@ class ListListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             
-            RealmHelper.deleteList(lists[indexPath.row])
             
-            lists = RealmHelper.retrieveList()
         }
     }
     
