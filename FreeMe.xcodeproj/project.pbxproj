@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45156C8D6842BF2444BB3F1C /* Pods_FreeMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C30D4486FE64A2BA1CD1FD2 /* Pods_FreeMe.framework */; };
 		B1090D4E1D336E7000EBD7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D4D1D336E7000EBD7F6 /* AppDelegate.swift */; };
 		B1090D501D336E7000EBD7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D4F1D336E7000EBD7F6 /* ViewController.swift */; };
 		B1090D531D336E7000EBD7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1090D511D336E7000EBD7F6 /* Main.storyboard */; };
 		B1090D551D336E7000EBD7F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1090D541D336E7000EBD7F6 /* Assets.xcassets */; };
 		B1090D581D336E7000EBD7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1090D561D336E7000EBD7F6 /* LaunchScreen.storyboard */; };
 		B1090D601D3387BF00EBD7F6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D5F1D3387BF00EBD7F6 /* List.swift */; };
-		B1090D641D33896200EBD7F6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1090D621D33896200EBD7F6 /* Realm.framework */; };
-		B1090D651D33896300EBD7F6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1090D631D33896200EBD7F6 /* RealmSwift.framework */; };
 		B1090D6D1D339F2E00EBD7F6 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D6C1D339F2E00EBD7F6 /* RealmHelper.swift */; };
 		B10A7B171D354F34002DD376 /* NSDate+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A7B161D354F34002DD376 /* NSDate+convertToString.swift */; };
 		B11E282D1D34914700C88663 /* ListListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E282C1D34914700C88663 /* ListListTableViewController.swift */; };
@@ -23,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		136C3DF35DA09A699232D38F /* Pods-FreeMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMe/Pods-FreeMe.debug.xcconfig"; sourceTree = "<group>"; };
+		7C30D4486FE64A2BA1CD1FD2 /* Pods_FreeMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		874D0FBA6F7FFB3BD1DC6D5B /* Pods-FreeMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMe/Pods-FreeMe.release.xcconfig"; sourceTree = "<group>"; };
 		B1090D4A1D336E7000EBD7F6 /* FreeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1090D4D1D336E7000EBD7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1090D4F1D336E7000EBD7F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,8 +33,6 @@
 		B1090D571D336E7000EBD7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1090D591D336E7000EBD7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1090D5F1D3387BF00EBD7F6 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../List.swift; sourceTree = "<group>"; };
-		B1090D621D33896200EBD7F6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		B1090D631D33896200EBD7F6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		B1090D6C1D339F2E00EBD7F6 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		B10A7B161D354F34002DD376 /* NSDate+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+convertToString.swift"; sourceTree = "<group>"; };
 		B11E282C1D34914700C88663 /* ListListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListListTableViewController.swift; path = ../ListListTableViewController.swift; sourceTree = "<group>"; };
@@ -45,8 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1090D651D33896300EBD7F6 /* RealmSwift.framework in Frameworks */,
-				B1090D641D33896200EBD7F6 /* Realm.framework in Frameworks */,
+				45156C8D6842BF2444BB3F1C /* Pods_FreeMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +55,10 @@
 		B1090D411D336E7000EBD7F6 = {
 			isa = PBXGroup;
 			children = (
-				B1090D611D33896200EBD7F6 /* Frameworks */,
 				B1090D4C1D336E7000EBD7F6 /* FreeMe */,
 				B1090D4B1D336E7000EBD7F6 /* Products */,
+				CA264DAC108A91B471EEB4A7 /* Pods */,
+				D6F0E27CC330E1FD47280C58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,15 +86,6 @@
 				B1090D591D336E7000EBD7F6 /* Info.plist */,
 			);
 			path = FreeMe;
-			sourceTree = "<group>";
-		};
-		B1090D611D33896200EBD7F6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B1090D621D33896200EBD7F6 /* Realm.framework */,
-				B1090D631D33896200EBD7F6 /* RealmSwift.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		B1090D6B1D339F0700EBD7F6 /* Helpers */ = {
@@ -138,6 +129,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CA264DAC108A91B471EEB4A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				136C3DF35DA09A699232D38F /* Pods-FreeMe.debug.xcconfig */,
+				874D0FBA6F7FFB3BD1DC6D5B /* Pods-FreeMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6F0E27CC330E1FD47280C58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C30D4486FE64A2BA1CD1FD2 /* Pods_FreeMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1090D5C1D336E7000EBD7F6 /* Build configuration list for PBXNativeTarget "FreeMe" */;
 			buildPhases = (
+				79B08FF5EAFB02089310B4AC /* [CP] Check Pods Manifest.lock */,
 				B1090D461D336E7000EBD7F6 /* Sources */,
 				B1090D471D336E7000EBD7F6 /* Frameworks */,
 				B1090D481D336E7000EBD7F6 /* Resources */,
+				D9161B641484A54D5D2085D6 /* [CP] Embed Pods Frameworks */,
+				1FB545AA38A7ED9F87988447 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,6 +181,7 @@
 				TargetAttributes = {
 					B1090D491D336E7000EBD7F6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = E26925RH2T;
 					};
 				};
 			};
@@ -203,6 +215,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FB545AA38A7ED9F87988447 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreeMe/Pods-FreeMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79B08FF5EAFB02089310B4AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9161B641484A54D5D2085D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreeMe/Pods-FreeMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1090D461D336E7000EBD7F6 /* Sources */ = {
@@ -327,8 +387,11 @@
 		};
 		B1090D5D1D336E7000EBD7F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 136C3DF35DA09A699232D38F /* Pods-FreeMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -337,13 +400,17 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3Dlantis.Spekke.FreeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		B1090D5E1D336E7000EBD7F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874D0FBA6F7FFB3BD1DC6D5B /* Pods-FreeMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -352,6 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3Dlantis.Spekke.FreeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
