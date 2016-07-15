@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Lists-->
@@ -79,10 +78,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuo-fL-YjN">
-                                            <rect key="frame" x="17" y="22" width="97" height="30"/>
-                                            <state key="normal" title="Radio Button"/>
-                                        </button>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prw-hl-4Zq">
                                             <rect key="frame" x="117" y="22" width="143" height="30"/>
                                             <color key="textColor" red="0.26666666666666666" green="0.58823529411764708" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,12 +85,9 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Sx-5u-NZE">
-                                            <rect key="frame" x="48" y="50" width="51" height="31"/>
+                                            <rect key="frame" x="38" y="22" width="51" height="31"/>
                                         </switch>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Yuo-fL-YjN" firstAttribute="leading" secondItem="Pp6-Al-Mi6" secondAttribute="leadingMargin" constant="9" id="fy3-TY-cXD"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="itemNameTextField" destination="prw-hl-4Zq" id="eiX-Od-lOc"/>
@@ -113,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nH-Ej-DTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="273"/>
+            <point key="canvasLocation" x="1682" y="273"/>
         </scene>
         <!--Title-->
         <scene sceneID="Zfp-rU-9L8">
@@ -187,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8E2-YP-4v7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2470" y="240"/>
+            <point key="canvasLocation" x="2118" y="273"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xM7-jw-cCv">
@@ -206,7 +198,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmr-cw-PGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288" y="321"/>
+            <point key="canvasLocation" x="812" y="273"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

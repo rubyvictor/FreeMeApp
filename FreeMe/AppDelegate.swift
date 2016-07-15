@@ -19,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Set up the Parse SDK
-//        let configuration = ParseClientConfiguration {
-//            $0.applicationId = APP_ID
-//            $0.server = SERVER_URL
-//        }
-//        Parse.initializeWithConfiguration(configuration)
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "freeMeApp"
+            $0.server = "https://enthousiaste-madame-87816.herokuapp.com/parse"
+        }
+        Parse.initializeWithConfiguration(configuration)
         
         return true
     }
