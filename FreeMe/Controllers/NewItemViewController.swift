@@ -96,6 +96,12 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+
+    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
         return 1

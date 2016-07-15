@@ -18,15 +18,21 @@ class ListListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         let list1 = List()
+        let list2 = List()
         
         let item1 = Item(name: "Milk", itemState: false, itemCategory: .Bakery, quantity:2)
         list1.arrayOfItems.append(item1)
+        
         let item2 = Item(name: "bread", itemState: false, itemCategory: .Bakery, quantity:4)
         list1.arrayOfItems.append(item2)
         
-        list1.title = "Buy groceries or else...."
+        list1.title = "Better buy groceries tonight!!"
         
         self.lists.append(list1)
+        
+        list2.title = "Better don't forget or else!!!"
+        
+        self.lists.append(list2)
         
         self.tableView.reloadData()
     }
@@ -46,8 +52,14 @@ class ListListTableViewController: UITableViewController {
         
         cell.listModificationTimeLabel.text = list.modificationTime.convertToString()
         
+        cell.listNumberOfItemsLabel.text = "\(list.quantity) items "
+        //use interpolation to display quantity
+        
         return cell
     }
+    
+    //Get quantity of items in arrayOfItems to display in the label
+    
     
     //show segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

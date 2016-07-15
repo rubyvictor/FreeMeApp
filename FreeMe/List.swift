@@ -15,6 +15,16 @@ class List {
     var arrayOfItems: [Item] = []
     var title: String = ""
     var modificationTime = NSDate()
+    var quantity: Int {
+        get {
+            var sumQuantity = 0
+            for item in arrayOfItems {
+               sumQuantity += item.quantity
+            }
+            
+            return sumQuantity
+        }
+    }
     
     
     
