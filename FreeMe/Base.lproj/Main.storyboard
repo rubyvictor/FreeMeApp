@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Lists-->
@@ -78,19 +79,37 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prw-hl-4Zq">
-                                            <rect key="frame" x="117" y="22" width="143" height="30"/>
-                                            <color key="textColor" red="0.26666666666666666" green="0.58823529411764708" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Sx-5u-NZE">
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Sx-5u-NZE">
                                             <rect key="frame" x="38" y="22" width="51" height="31"/>
                                         </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K30-Q1-VLm">
+                                            <rect key="frame" x="145" y="26" width="158" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.32941176470588235" green="0.59215686274509804" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCJ-S7-hlu">
+                                            <rect key="frame" x="145" y="8" width="158" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.32941176470588235" green="0.32156862745098042" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9Sx-5u-NZE" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="14" id="83b-p9-Lw6"/>
+                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="leading" secondItem="9Sx-5u-NZE" secondAttribute="trailing" constant="58" id="S3p-kL-qQz"/>
+                                        <constraint firstItem="iCJ-S7-hlu" firstAttribute="width" secondItem="K30-Q1-VLm" secondAttribute="width" id="ZOo-20-ozj"/>
+                                        <constraint firstItem="iCJ-S7-hlu" firstAttribute="leading" secondItem="K30-Q1-VLm" secondAttribute="leading" id="d1R-EX-SZI"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="K30-Q1-VLm" secondAttribute="trailing" constant="9" id="dVe-BF-YsJ"/>
+                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="18" id="f7t-ZD-6Xj"/>
+                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="iCJ-S7-hlu" secondAttribute="bottom" constant="-3" id="mfe-BA-X6P"/>
+                                        <constraint firstItem="9Sx-5u-NZE" firstAttribute="leading" secondItem="Pp6-Al-Mi6" secondAttribute="leadingMargin" constant="30" id="oJj-Oo-bR2"/>
+                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="iCJ-S7-hlu" secondAttribute="bottom" constant="-3" id="zXe-Wx-16Q"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="itemNameTextField" destination="prw-hl-4Zq" id="eiX-Od-lOc"/>
+                                    <outlet property="categoryNameLabel" destination="iCJ-S7-hlu" id="UOZ-D4-JmF"/>
+                                    <outlet property="itemNameLabel" destination="K30-Q1-VLm" id="rPH-rR-kxM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -153,14 +172,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-YW-aZa">
-                                <rect key="frame" x="135" y="196" width="94" height="29"/>
-                            </stepper>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item quantity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xtk-QF-Huu">
-                                <rect key="frame" x="34" y="147" width="253" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -174,7 +185,6 @@
                     <connections>
                         <outlet property="categoryCollectionView" destination="Oec-nY-Ikq" id="Syp-Tb-531"/>
                         <outlet property="nameTextField" destination="YKs-Nf-kYI" id="k4D-Si-leX"/>
-                        <outlet property="quantityTextField" destination="Xtk-QF-Huu" id="9tc-X5-H4Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8E2-YP-4v7" userLabel="First Responder" sceneMemberID="firstResponder"/>

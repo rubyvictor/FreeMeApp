@@ -64,8 +64,8 @@ class DisplayListViewController: UITableViewController {
 
         // Configure the cell...
         let item = list!.arrayOfItems[indexPath.row]
-        
-        cell.itemNameTextField.text = item.name
+        cell.itemNameLabel.text = item.name
+        cell.categoryNameLabel.text = item.itemCategory.rawValue
         
         return cell
     }

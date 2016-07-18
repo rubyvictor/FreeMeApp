@@ -11,11 +11,14 @@ import UIKit
 class ItemTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var itemNameTextField: UITextField!
+    @IBOutlet weak var itemNameLabel: UILabel!
     
+    @IBOutlet weak var categoryNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
         // Initialization code
     }
 

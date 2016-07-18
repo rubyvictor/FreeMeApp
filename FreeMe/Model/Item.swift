@@ -11,8 +11,8 @@ import Foundation
 import RealmSwift
 
 
-enum Category: Int {
-    case Beverages = 1, Bakery, CannedGoods, Dairy, BakingGoods, FrozenFood, Meat, Produce, Cleaning, PaperGoods, PersonalCare, BabyCare
+enum Category: String {
+    case Beverages = "Beverages", Bakery, CannedGoods, Dairy, BakingGoods, FrozenFood, Meat, Produce, Cleaning, PaperGoods, PersonalCare, BabyCare
 }
 
 class Item {

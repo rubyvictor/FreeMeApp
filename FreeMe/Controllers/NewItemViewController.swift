@@ -11,7 +11,7 @@ import UIKit
 class NewItemViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var quantityTextField: UITextField!
+    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     var arrayOfCategories: [NSDictionary] = []
