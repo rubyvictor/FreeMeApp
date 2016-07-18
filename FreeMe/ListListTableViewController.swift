@@ -93,6 +93,7 @@ class ListListTableViewController: UITableViewController {
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
+            
         }
     }
     
