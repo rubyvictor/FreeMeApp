@@ -8,11 +8,11 @@
 
 import UIKit
 
-class NewItemViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class NewItemViewController: UIViewController, UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var nameTextField: UITextField!
     
-    @IBOutlet weak var categoryCollectionView: UICollectionView!
+    
     
     var arrayOfCategories: [NSDictionary] = []
     
@@ -25,8 +25,8 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
 
         // Do any additional setup after loading the view.
         
-        categoryCollectionView.delegate = self
-        categoryCollectionView.dataSource = self
+        categoryScrollView.delegate = self
+        categoryScrollView.dataSource = self
         
         let dict1 = NSMutableDictionary()
         dict1["categoryNum"] = NSNumber(integer: 1)
@@ -35,7 +35,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let dict2 = NSMutableDictionary()
         dict2["categoryNum"] = NSNumber(integer: 2)
-        dict2["imageFilename"] = "bakery"
+        dict2["imageFilename"] = "Grains"
         arrayOfCategories.append(dict2)
         
         let dict3 = NSMutableDictionary()
@@ -88,7 +88,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         dict12["imageFilename"] = "babycare"
         arrayOfCategories.append(dict12)
         
-        categoryCollectionView.reloadData()
+        categoryScrollView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
