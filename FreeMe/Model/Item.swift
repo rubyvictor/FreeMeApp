@@ -20,13 +20,16 @@ class Item {
     var name: String = ""
     var itemState: Bool = false
     var itemCategory: Category = .Beverages
-    var quantity: Int
+//    var quantity: Int
+    var itemCount: Int
     
-    init(name: String, itemState: Bool, itemCategory: Category, quantity: Int) {
+    init(name: String, itemState: Bool, itemCategory: Category, count: Int) {
         self.name = name
         self.itemState = itemState
         self.itemCategory = itemCategory
-        self.quantity = quantity
+//        self.quantity = quantity
+        self.itemCount = count
+    
     }
     
     

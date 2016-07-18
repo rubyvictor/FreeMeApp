@@ -5,6 +5,7 @@
 //  Created by Victor Lee on 11/7/16.
 //  Copyright © 2016 VictorLee. All rights reserved.
 //
+//3 parts to protocol: protocol declaration, adoption, conforming. Mainly for Delegation.
 
 import UIKit
 import Parse

@@ -15,14 +15,24 @@ class List {
     var arrayOfItems: [Item] = []
     var title: String = ""
     var modificationTime = NSDate()
-    var quantity: Int {
+    var count: Int {
         get {
-            var sumQuantity = 0
+            var sumCount = 0
             for item in arrayOfItems {
-               sumQuantity += item.quantity
+                sumCount += item.itemCount
             }
-            
-            return sumQuantity
+            return sumCount
         }
     }
+    
+//    var quantity: Int {
+//        get {
+//            var sumQuantity = 0
+//            for item in arrayOfItems {
+//               sumQuantity += item.quantity
+//            }
+//            
+//            return sumQuantity
+//        }
+//    }
 }

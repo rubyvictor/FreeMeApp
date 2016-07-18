@@ -20,11 +20,17 @@ class ListListTableViewController: UITableViewController {
         let list1 = List()
         let list2 = List()
         
-        let item1 = Item(name: "Milk", itemState: false, itemCategory: .Bakery, quantity:2)
+//        let item1 = Item(name: "Milk", itemState: false, itemCategory: .Bakery, quantity:2)
+//        list1.arrayOfItems.append(item1)
+//        
+//        let item2 = Item(name: "bread", itemState: false, itemCategory: .Bakery, quantity:4)
+//        list1.arrayOfItems.append(item2)
+        
+        let item1 = Item(name: "Milk", itemState: false, itemCategory: .Dairy, count: 3)
         list1.arrayOfItems.append(item1)
         
-        let item2 = Item(name: "bread", itemState: false, itemCategory: .Bakery, quantity:4)
-        list1.arrayOfItems.append(item2)
+        let item2 = Item(name: "Bread", itemState: false, itemCategory: .Bakery, count: 9)
+        list2.arrayOfItems.append(item2)
         
         list1.title = "Better buy groceries tonight!!"
         
@@ -52,7 +58,7 @@ class ListListTableViewController: UITableViewController {
         
         cell.listModificationTimeLabel.text = list.modificationTime.convertToString()
         
-        cell.listNumberOfItemsLabel.text = "\(list.quantity) items "
+        cell.listNumberOfItemsLabel.text = "\(list.count) items "
         //use interpolation to display quantity
         
         return cell

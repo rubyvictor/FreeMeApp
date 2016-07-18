@@ -134,7 +134,9 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         //save to array
         
-        let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Category(rawValue: selectedCategory)!, quantity: Int(quantityTextField.text!)!)
+//        let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Category(rawValue: selectedCategory)!, quantity: Int(quantityTextField.text!)!)
+        
+        let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Category(rawValue: selectedCategory)!, count: Int())
         
         list?.arrayOfItems.append(newItem)
         
