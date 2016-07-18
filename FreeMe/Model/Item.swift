@@ -12,7 +12,7 @@ import RealmSwift
 
 
 enum Category: Int {
-    case Beverages = 1, Bakery, CannedGoods, Dairy, BakingGoods, FrozenFood, Meat, Produce, Cleaning, PaperGoods, PersonalCare, BabyCare
+    case Beverages = 1, Grains, Vegetables, CannedFood, Dairy, Baking, FrozenFood, Meat, Fruits, Toiletries, Seafood, DryFoods, BabyCare
 }
 
 class Item {
