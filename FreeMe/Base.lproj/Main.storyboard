@@ -129,7 +129,7 @@
         <!--Add List-->
         <scene sceneID="oAz-Aw-huz">
             <objects>
-                <viewController id="TzL-Pj-BEB" sceneMemberID="viewController">
+                <viewController id="TzL-Pj-BEB" customClass="NewListViewController" customModule="FreeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gtd-CE-TH7"/>
                         <viewControllerLayoutGuide type="bottom" id="8XS-mw-qde"/>
@@ -165,6 +165,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-PF-ytb">
+                                <rect key="frame" x="154" y="153" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -175,9 +181,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add List" id="UT0-17-Ru4">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sSH-8J-jtB"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nKq-8H-3JC"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nKq-8H-3JC">
+                            <connections>
+                                <action selector="saveAction" destination="TzL-Pj-BEB" id="jVd-N7-Llj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="listErrorLabel" destination="HPK-PF-ytb" id="gV7-jh-JMx"/>
+                        <outlet property="newListTitleTextField" destination="tDd-Ei-D0q" id="3iB-Py-kot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hxr-SR-69v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

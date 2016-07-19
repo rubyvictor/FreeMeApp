@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import RealmSwift
 
+
 class List {
     
     var arrayOfItems: [Item] = []
@@ -24,15 +25,4 @@ class List {
             return sumCount
         }
     }
-    
-//    var quantity: Int {
-//        get {
-//            var sumQuantity = 0
-//            for item in arrayOfItems {
-//               sumQuantity += item.quantity
-//            }
-//            
-//            return sumQuantity
-//        }
-//    }
 }
