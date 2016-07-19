@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" title="Lists" id="S1P-0A-heA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Hh-5g-XUx">
                             <connections>
-                                <segue destination="GFv-10-ojh" kind="show" identifier="addList" id="Mab-wT-twH"/>
+                                <segue destination="TzL-Pj-BEB" kind="show" id="hfx-dd-AHU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -126,6 +126,63 @@
             </objects>
             <point key="canvasLocation" x="1682" y="273"/>
         </scene>
+        <!--Add List-->
+        <scene sceneID="oAz-Aw-huz">
+            <objects>
+                <viewController id="TzL-Pj-BEB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gtd-CE-TH7"/>
+                        <viewControllerLayoutGuide type="bottom" id="8XS-mw-qde"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u86-TK-XxQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JTj-uI-hMm">
+                                <rect key="frame" x="16" y="84" width="288" height="484"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="0bn-JC-4cp">
+                                        <rect key="frame" x="0.0" y="92" width="288" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0bn-JC-4cp" id="iRl-lS-A0F">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="56"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whq-wJ-OUA">
+                                                    <rect key="frame" x="16" y="11" width="106" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.29411764705882354" green="0.61176470588235299" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type title of list" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-Ei-D0q">
+                                                    <rect key="frame" x="91" y="5" width="197" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8XS-mw-qde" firstAttribute="top" secondItem="JTj-uI-hMm" secondAttribute="bottom" id="Eep-0R-D29"/>
+                            <constraint firstItem="JTj-uI-hMm" firstAttribute="leading" secondItem="u86-TK-XxQ" secondAttribute="leadingMargin" id="Ll9-8c-WPy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JTj-uI-hMm" secondAttribute="trailing" id="N14-ve-R6P"/>
+                            <constraint firstItem="JTj-uI-hMm" firstAttribute="top" secondItem="gtd-CE-TH7" secondAttribute="bottom" constant="20" id="s9y-sb-TKA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add List" id="UT0-17-Ru4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sSH-8J-jtB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nKq-8H-3JC"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxr-SR-69v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="-464"/>
+        </scene>
         <!--Title-->
         <scene sceneID="Zfp-rU-9L8">
             <objects>
@@ -172,11 +229,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="list name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ca-ho-spC">
-                                <rect key="frame" x="34" y="91" width="253" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks8-Vc-55u">
+                                <rect key="frame" x="34" y="109" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGo-Et-eWu">
+                                <rect key="frame" x="34" y="72" width="253" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -189,6 +253,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryCollectionView" destination="Oec-nY-Ikq" id="Syp-Tb-531"/>
+                        <outlet property="errorLabel" destination="ks8-Vc-55u" id="pKl-1I-I5j"/>
+                        <outlet property="listNameLabel" destination="jGo-Et-eWu" id="S0x-ZA-0Oc"/>
                         <outlet property="nameTextField" destination="YKs-Nf-kYI" id="k4D-Si-leX"/>
                     </connections>
                 </viewController>
@@ -216,7 +282,4 @@
             <point key="canvasLocation" x="812" y="273"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pvG-Y2-Vru"/>
-    </inferredMetricsTieBreakers>
 </document>

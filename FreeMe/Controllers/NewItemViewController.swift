@@ -14,6 +14,10 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    @IBOutlet weak var listNameLabel: UILabel!
+    
     var arrayOfCategories: [NSDictionary] = []
     
     var list: List?
@@ -27,66 +31,92 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+        listNameLabel.text = list?.title
         
         let dict1 = NSMutableDictionary()
         dict1["categoryNum"] = NSNumber(integer: 1)
+        dict1["categoryName"] = "Beverages"
+        dict1["imageUrl"] = "https://"
         dict1["imageFilename"] = "beverage"
         arrayOfCategories.append(dict1)
         
         let dict2 = NSMutableDictionary()
         dict2["categoryNum"] = NSNumber(integer: 2)
-        dict2["imageFilename"] = "bakery"
+        dict2["categoryName"] = "Grains"
+        dict2["imageFilename"] = "grains"
         arrayOfCategories.append(dict2)
         
         let dict3 = NSMutableDictionary()
         dict3["categoryNum"] = NSNumber(integer: 3)
-        dict3["imageFilename"] = "cannedgoods"
+        dict3["categoryName"] = "Vegetables"
+        dict3["imageFilename"] = "vegetables"
         arrayOfCategories.append(dict3)
         
         let dict4 = NSMutableDictionary()
         dict4["categoryNum"] = NSNumber(integer: 4)
-        dict4["imageFilename"] = "dairy"
+        dict4["categoryName"] = "CannedFood"
+        dict4["imageFilename"] = "cannedfood"
         arrayOfCategories.append(dict4)
         
         let dict5 = NSMutableDictionary()
         dict5["categoryNum"] = NSNumber(integer: 5)
-        dict5["imageFilename"] = "bakinggoods"
+        dict5["categoryName"] = "Dairy"
+        dict5["imageFilename"] = "dairy"
         arrayOfCategories.append(dict5)
         
         let dict6 = NSMutableDictionary()
         dict6["categoryNum"] = NSNumber(integer: 6)
-        dict6["imageFilename"] = "frozenfood"
+        dict6["categoryName"] = "Baking"
+        dict6["imageFilename"] = "baking"
         arrayOfCategories.append(dict6)
         
         let dict7 = NSMutableDictionary()
         dict7["categoryNum"] = NSNumber(integer: 7)
-        dict7["imageFilename"] = "meat"
+        dict7["categoryName"] = "FrozenFood"
+        dict7["imageFilename"] = "frozenfood"
         arrayOfCategories.append(dict7)
         
         let dict8 = NSMutableDictionary()
         dict8["categoryNum"] = NSNumber(integer: 8)
-        dict8["imageFilename"] = "produce"
+        dict8["categoryName"] = "Meat"
+        dict8["imageFilename"] = "meat"
         arrayOfCategories.append(dict8)
         
         let dict9 = NSMutableDictionary()
         dict9["categoryNum"] = NSNumber(integer: 9)
-        dict9["imageFilename"] = "cleaning"
+        dict9["categoryName"] = "Fruits"
+        dict9["imageFilename"] = "fruits"
         arrayOfCategories.append(dict9)
         
         let dict10 = NSMutableDictionary()
         dict10["categoryNum"] = NSNumber(integer: 10)
-        dict10["imageFilename"] = "papergoods"
+        dict10["categoryName"] = "Toiletries"
+        dict10["imageFilename"] = "toiletries"
         arrayOfCategories.append(dict10)
         
         let dict11 = NSMutableDictionary()
         dict11["categoryNum"] = NSNumber(integer: 11)
-        dict11["imageFilename"] = "personalcare"
+        dict11["categoryName"] = "Seafood"
+        dict11["imageFilename"] = "seafood"
         arrayOfCategories.append(dict11)
         
         let dict12 = NSMutableDictionary()
         dict12["categoryNum"] = NSNumber(integer: 12)
-        dict12["imageFilename"] = "babycare"
+        dict12["categoryName"] = "DryFoods"
+        dict12["imageFilename"] = "dryfoods"
         arrayOfCategories.append(dict12)
+        
+        let dict13 = NSMutableDictionary()
+        dict13["categoryNum"] = NSNumber(integer: 13)
+        dict13["categoryName"] = "Cleaning"
+        dict13["imageFilename"] = "cleaning"
+        arrayOfCategories.append(dict13)
+        
+        let dict14 = NSMutableDictionary()
+        dict14["categoryNum"] = NSNumber(integer: 14)
+        dict14["categoryName"] = "BabyCare"
+        dict14["imageFilename"] = "babycare"
+        arrayOfCategories.append(dict14)
         
         categoryCollectionView.reloadData()
     }
@@ -128,13 +158,23 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         selectedCategory = indexPath.item + 1
+        //swap icon code here. create second set of images with different color to show icon selected
+        //
+        
     }
+    //add func here to swap back icon after tapping
+//    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+//        code here
+//    }
     
     @IBAction func saveAction() {
-        
+        //Check for item name text field whether blank
+        if isTextFieldBlank(nameTextField) {
+            errorLabel.text = "Enter item name"
+        return
+        }
+    
         //save to array
-        
-//        let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Category(rawValue: selectedCategory)!, quantity: Int(quantityTextField.text!)!)
         
         let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Category(rawValue: selectedCategory)!, count: Int())
         
@@ -144,7 +184,19 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
+
+    //add new function to validate newItem input here
+    func isTextFieldBlank(textField: UITextField) -> Bool {
+        
+        let text = textField.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        
+        if text == "" {
+            
+            return true
+        }
+        
+        return false
+    }
 
     /*
     // MARK: - Navigation

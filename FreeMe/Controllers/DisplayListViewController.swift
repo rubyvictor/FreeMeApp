@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Parse
+//import Parse
 
 class DisplayListViewController: UITableViewController {
     
@@ -64,8 +64,9 @@ class DisplayListViewController: UITableViewController {
 
         // Configure the cell...
         let item = list!.arrayOfItems[indexPath.row]
+        
         cell.itemNameLabel.text = item.name
-        cell.categoryNameLabel.text = item.itemCategory.rawValue
+        cell.categoryNameLabel.text = item.categoryNameForCategoryNum()
         
         return cell
     }

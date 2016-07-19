@@ -29,7 +29,7 @@ class ListListTableViewController: UITableViewController {
         let item1 = Item(name: "Milk", itemState: false, itemCategory: .Dairy, count: 3)
         list1.arrayOfItems.append(item1)
         
-        let item2 = Item(name: "Bread", itemState: false, itemCategory: .Bakery, count: 9)
+        let item2 = Item(name: "Bread", itemState: false, itemCategory: .Grains, count: 9)
         list2.arrayOfItems.append(item2)
         
         list1.title = "Better buy groceries tonight!!"
