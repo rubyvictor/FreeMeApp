@@ -31,7 +31,7 @@ class Item {
         self.itemCount = count
     
     }
-    
+    //TODO:  make it work then make it good.
     func categoryNameForCategoryNum() -> String {
         
         let cat = self.itemCategory
@@ -74,10 +74,16 @@ class Item {
         }
         else if cat == .DryFoods {
             return "DryFoods"
-        }else {
+        }
+        else if cat == .Cleaning {
+            return "Cleaning"
+        }
+        else {
             return "BabyCare"
         }
     }
+    
+    //TODO: try a switch for better practice
     
     func integerForCategory() -> Int {
         

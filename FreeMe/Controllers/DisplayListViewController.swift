@@ -81,7 +81,16 @@ class DisplayListViewController: UITableViewController {
         }
     }
     
-
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            //add "if.. else if" code here to delete the list or to show the delete button when swiped
+            
+            
+            list!.arrayOfItems.removeAtIndex(indexPath.row)
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -128,3 +137,4 @@ class DisplayListViewController: UITableViewController {
     */
 
 }
+
