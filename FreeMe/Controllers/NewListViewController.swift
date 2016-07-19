@@ -8,32 +8,19 @@
 
 import UIKit
 
-class NewListViewController: UITableViewController {
+class NewListViewController: UIViewController {
     
     
     @IBOutlet weak var newListTitleTextField: UITextField!
     
     @IBOutlet weak var listErrorLabel: UILabel!
     
-    var list: [List] = []
+    weak var listListVC: ListListTableViewController?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let list = list {
-//            
-//            self.title = list.title
-//            
-//            
-//            self.tableView.reloadData()
-//        }
-//        else {
-//            
-//        }
-
-        
-        
-    }
+       }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,16 +34,16 @@ class NewListViewController: UITableViewController {
 
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
-    }
-    
-
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return list.count
+//    }
+//    
+//
+//    
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
     
     
     @IBAction func saveAction() {
@@ -68,12 +55,26 @@ class NewListViewController: UITableViewController {
         
         let newList = List()
         
-        newList.title = "new grocery new list"
+//        newList.title = "new grocery new list"
+        newList.title = newListTitleTextField.text!
         
-        self.list.append(newList)
+        listListVC?.lists.append(newList)
         
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
+    //segue to pass self.list weak var??
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if segue.identifier == "goToListList" {
+//            
+//            let listListTableViewController = segue.destinationViewController as! ListListTableViewController
+//            
+//            listListTableViewController.lists = list
+//        }
+//    }
+
+    
     
     func isTextFieldBlank(newListTitletextField: UITextField) -> Bool {
         

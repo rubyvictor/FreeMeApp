@@ -42,6 +42,12 @@ class ListListTableViewController: UITableViewController {
         
         self.tableView.reloadData()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.tableView.reloadData()
+    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lists.count
@@ -71,6 +77,7 @@ class ListListTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let identifier = segue.identifier {
+            
             if identifier == "displayList"{
                 print("Table view cell tapped")
                 
@@ -85,6 +92,11 @@ class ListListTableViewController: UITableViewController {
             }
             else if identifier == "addList" {
                 print("+ button tapped")
+                
+                
+                let newListViewController = segue.destinationViewController as! NewListViewController
+                
+                newListViewController.listListVC = self
                 
             }
         }
