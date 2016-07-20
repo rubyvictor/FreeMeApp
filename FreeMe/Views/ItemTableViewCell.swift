@@ -11,6 +11,21 @@ import UIKit
 class ItemTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var mySwitch: UISwitch!
+    
+//by declaring this property, i am allowed to hold an instance of Item
+    var item: Item!
+    
+    
+    @IBAction func switchClicked(sender: AnyObject) {
+        if mySwitch.on {
+            self.item.itemState = true
+            //why not use cell.item.. because we ar already in the instance of itemtableVCell
+        }else {
+            self.item.itemState = false
+        }
+    }
+    
     @IBOutlet weak var itemNameLabel: UILabel!
     
     @IBOutlet weak var categoryNameLabel: UILabel!

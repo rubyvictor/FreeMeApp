@@ -65,8 +65,13 @@ class DisplayListViewController: UITableViewController {
         // Configure the cell...
         let item = list!.arrayOfItems[indexPath.row]
         
+        //assign property into instance cell
+        
+        cell.mySwitch.on = item.itemState
         cell.itemNameLabel.text = item.name
         cell.categoryNameLabel.text = item.categoryNameForCategoryNum()
+        
+        cell.item = item //by doing this we are assigning a specific item to the cell's property
         
         return cell
     }
@@ -91,6 +96,7 @@ class DisplayListViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

@@ -29,7 +29,6 @@ class Item {
         self.itemCategory = itemCategory
 //        self.quantity = quantity
         self.itemCount = count
-    
     }
     //TODO:  make it work then make it good.
     func categoryNameForCategoryNum() -> String {
