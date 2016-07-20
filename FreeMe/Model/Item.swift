@@ -18,7 +18,7 @@ enum Category: Int {
 class Item {
     
     var name: String = ""
-    var itemState: Bool = true
+    var itemState: Bool = false
     var itemCategory: Category = .Beverages
 //    var quantity: Int
     var itemCount: Int

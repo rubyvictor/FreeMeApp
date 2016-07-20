@@ -24,14 +24,14 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujk-xh-hB6">
                                             <rect key="frame" x="18" y="8" width="277" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" red="0.32549019607843138" green="0.6588235294117647" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Number of Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2M-jQ-gsA">
                                             <rect key="frame" x="18" y="30" width="185" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.40392156862745099" green="0.396078431372549" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Modification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMi-gr-K8h">
@@ -41,6 +41,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="listModificationTimeLabel" destination="zMi-gr-K8h" id="X1g-I1-P3C"/>
@@ -53,6 +54,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Lists" id="S1P-0A-heA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Hh-5g-XUx">
+                            <color key="tintColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="TzL-Pj-BEB" kind="show" identifier="addList" id="hfx-dd-AHU"/>
                             </connections>
@@ -81,6 +83,7 @@
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Sx-5u-NZE">
                                             <rect key="frame" x="38" y="22" width="51" height="31"/>
+                                            <color key="onTintColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="switchClicked:" destination="sT3-xD-5oI" eventType="valueChanged" id="sOF-D0-QQd"/>
                                             </connections>
@@ -88,16 +91,17 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K30-Q1-VLm">
                                             <rect key="frame" x="145" y="26" width="158" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.32941176470588235" green="0.59215686274509804" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCJ-S7-hlu">
                                             <rect key="frame" x="145" y="8" width="158" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.32941176470588235" green="0.32156862745098042" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="9Sx-5u-NZE" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="14" id="83b-p9-Lw6"/>
                                         <constraint firstItem="K30-Q1-VLm" firstAttribute="leading" secondItem="9Sx-5u-NZE" secondAttribute="trailing" constant="58" id="S3p-kL-qQz"/>
@@ -164,6 +168,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add List" id="UT0-17-Ru4">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nKq-8H-3JC">
+                            <color key="tintColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="saveAction" destination="TzL-Pj-BEB" id="jVd-N7-Llj"/>
                             </connections>
@@ -191,10 +196,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oec-nY-Ikq">
-                                <rect key="frame" x="16" y="283" width="288" height="285"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="16" y="164" width="288" height="404"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.43421336206896549" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="285" id="aYI-Q6-qYj"/>
+                                    <constraint firstAttribute="height" constant="350" id="aYI-Q6-qYj"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FZ9-bT-BlC">
                                     <size key="itemSize" width="60" height="60"/>
@@ -227,14 +232,19 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aYI-Q6-qYj"/>
+                                    </mask>
+                                </variation>
                             </collectionView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-Nf-kYI">
-                                <rect key="frame" x="16" y="244" width="288" height="34"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-Nf-kYI">
+                                <rect key="frame" x="16" y="112" width="288" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks8-Vc-55u">
-                                <rect key="frame" x="16" y="109" width="0.0" height="132"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks8-Vc-55u">
+                                <rect key="frame" x="16" y="109" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -253,6 +263,7 @@
                         <constraints>
                             <constraint firstItem="I6n-Pl-gP9" firstAttribute="top" secondItem="Oec-nY-Ikq" secondAttribute="bottom" id="35Q-s5-APw"/>
                             <constraint firstItem="Oec-nY-Ikq" firstAttribute="width" secondItem="YKs-Nf-kYI" secondAttribute="width" id="5LN-NQ-fPG"/>
+                            <constraint firstItem="Oec-nY-Ikq" firstAttribute="bottom" secondItem="I6n-Pl-gP9" secondAttribute="top" id="72X-Wz-gVy"/>
                             <constraint firstItem="jGo-Et-eWu" firstAttribute="top" secondItem="X9r-CL-RXC" secondAttribute="bottom" constant="8" symbolic="YES" id="7WE-2Q-Klq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YKs-Nf-kYI" secondAttribute="trailing" id="9UT-V7-UA4"/>
                             <constraint firstItem="YKs-Nf-kYI" firstAttribute="height" secondItem="jGo-Et-eWu" secondAttribute="height" id="I5k-Z7-4qW"/>
@@ -262,8 +273,14 @@
                             <constraint firstItem="jGo-Et-eWu" firstAttribute="leading" secondItem="YKs-Nf-kYI" secondAttribute="leading" id="Qku-Mp-7Uh"/>
                             <constraint firstItem="YKs-Nf-kYI" firstAttribute="top" secondItem="ks8-Vc-55u" secondAttribute="bottom" constant="3" id="TTk-Sa-Xkq"/>
                             <constraint firstItem="jGo-Et-eWu" firstAttribute="leading" secondItem="ks8-Vc-55u" secondAttribute="leading" id="aeZ-PW-FSv"/>
+                            <constraint firstItem="Oec-nY-Ikq" firstAttribute="top" secondItem="X9r-CL-RXC" secondAttribute="bottom" constant="100" id="bgg-l3-fhS"/>
                             <constraint firstItem="ks8-Vc-55u" firstAttribute="top" secondItem="jGo-Et-eWu" secondAttribute="bottom" constant="3" id="vA7-ca-C3R"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="35Q-s5-APw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="emW-np-qBx">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="fXv-v4-BLV">
