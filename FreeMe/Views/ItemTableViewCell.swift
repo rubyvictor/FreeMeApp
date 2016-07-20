@@ -19,10 +19,10 @@ class ItemTableViewCell: UITableViewCell {
     
     @IBAction func switchClicked(sender: AnyObject) {
         if mySwitch.on {
-            self.item.itemState = true
+            self.item.itemState = false
             //why not use cell.item.. because we ar already in the instance of itemtableVCell
         }else {
-            self.item.itemState = false
+            self.item.itemState = true
         }
     }
     
