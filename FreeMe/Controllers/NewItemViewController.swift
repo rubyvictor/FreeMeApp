@@ -22,7 +22,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var list: List?
     
-    var selectedCategory: Int = 1
+    var selectedCategory: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -181,11 +181,12 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     @IBAction func saveAction() {
         //Check for item name text field whether blank
-        if isTextFieldBlank(nameTextField) {
+        if isTextFieldBlank(nameTextField) || selectedCategory == nil {
             errorLabel.text = "Enter item name and click category"
             errorLabel.textColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1)
         return
         }
+        
     
         //save to array
         
