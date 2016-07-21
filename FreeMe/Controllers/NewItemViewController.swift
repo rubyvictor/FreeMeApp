@@ -29,6 +29,9 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
 
         // Do any additional setup after loading the view.
         
+        nameTextField.attributedPlaceholder = NSAttributedString(string:"item name",
+                                                               attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         listNameLabel.text = list?.title
@@ -38,6 +41,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         dict1["categoryName"] = "Beverages"
         dict1["imageUrl"] = "https://"
         dict1["imageFilename"] = "beverage"
+        dict1["highlightedImageFilename"] = "highlightedBeverage"
         arrayOfCategories.append(dict1)
         
         let dict2 = NSMutableDictionary()
@@ -118,6 +122,18 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         dict14["imageFilename"] = "babycare"
         arrayOfCategories.append(dict14)
         
+        let dict15 = NSMutableDictionary()
+        dict15["categoryNum"] = NSNumber(integer: 15)
+        dict15["categoryName"] = "Auto"
+        dict15["imageFilename"] = "auto"
+        arrayOfCategories.append(dict15)
+        
+        let dict16 = NSMutableDictionary()
+        dict16["categoryNum"] = NSNumber(integer: 16)
+        dict16["categoryName"] = "Pets"
+        dict16["imageFilename"] = "pets"
+        arrayOfCategories.append(dict16)
+        
         categoryCollectionView.reloadData()
     }
 
@@ -151,6 +167,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         let imageName = category["imageFilename"] as! String
         
         cell.imageView.image = UIImage(named: imageName)
+//        cell.imageView.highlightedImage = UIImage(named: "highlightedBeverage")
         
         return cell
     }
@@ -158,19 +175,15 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         selectedCategory = indexPath.item + 1
-        //swap icon code here. create second set of images with different color to show icon selected
-        //
         
     }
-    //add func here to swap back icon after tapping
-//    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-//        code here
-//    }
     
+
     @IBAction func saveAction() {
         //Check for item name text field whether blank
         if isTextFieldBlank(nameTextField) {
-            errorLabel.text = "Enter item name"
+            errorLabel.text = "Enter item name and click category"
+            errorLabel.textColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1)
         return
         }
     

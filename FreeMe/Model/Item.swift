@@ -12,7 +12,7 @@ import RealmSwift
 
 
 enum Category: Int {
-    case Beverages = 1, Grains, Vegetables, CannedFood, Dairy, Baking, FrozenFood, Meat, Fruits, Toiletries, Seafood, DryFoods, Cleaning, BabyCare
+    case Beverages = 1, Grains, Vegetables, CannedFood, Dairy, Baking, FrozenFood, Meat, Fruits, Toiletries, Seafood, DryFoods, Cleaning, BabyCare, Auto, Pets
 }
 
 class Item {
@@ -77,8 +77,14 @@ class Item {
         else if cat == .Cleaning {
             return "Cleaning"
         }
-        else {
+        else if cat == .BabyCare {
             return "BabyCare"
+        }
+        else if cat == .Auto {
+            return "Auto"
+        }
+        else {
+            return "Pets"
         }
     }
     
@@ -126,10 +132,18 @@ class Item {
         }
         else if cat == .DryFoods {
             return 12
-        }else if cat == .Cleaning {
+        }
+        else if cat == .Cleaning {
             return 13
-        }else {
+        }
+        else if cat == .BabyCare {
             return 14
+        }
+        else if cat == .Auto {
+            return 15
+        }
+        else {
+            return 16
         }
     }
 
