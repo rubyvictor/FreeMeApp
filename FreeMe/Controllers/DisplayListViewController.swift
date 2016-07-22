@@ -71,6 +71,7 @@ class DisplayListViewController: UITableViewController {
         cell.itemNameLabel.text = item.name
         cell.categoryNameLabel.text = item.categoryNameForCategoryNum()
         
+        
         cell.item = item //by doing this we are assigning a specific item to the cell's property
         
         return cell

@@ -17,28 +17,28 @@ class ListListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let list1 = List()
-        let list2 = List()
-        
+//        let list1 = List()
+//        let list2 = List()
+//        
 //        let item1 = Item(name: "Milk", itemState: false, itemCategory: .Bakery, quantity:2)
 //        list1.arrayOfItems.append(item1)
 //        
 //        let item2 = Item(name: "bread", itemState: false, itemCategory: .Bakery, quantity:4)
 //        list1.arrayOfItems.append(item2)
         
-        let item1 = Item(name: "Milk", itemState: false, itemCategory: .Dairy, count: 3)
-        list1.arrayOfItems.append(item1)
-        
-        let item2 = Item(name: "Bread", itemState: true, itemCategory: .Grains, count: 9)
-        list1.arrayOfItems.append(item2)
-        
-        list1.title = "Better buy groceries tonight!!"
-        
-        self.lists.append(list1)
-        
-        list2.title = "Better don't forget or else!!!"
-        
-        self.lists.append(list2)
+//        let item1 = Item(name: "Milk", itemState: false, itemCategory: .Dairy, count: 3)
+//        list1.arrayOfItems.append(item1)
+//        
+//        let item2 = Item(name: "Bread", itemState: true, itemCategory: .Grains, count: 9)
+//        list1.arrayOfItems.append(item2)
+//        
+//        list1.title = "Better buy groceries tonight!!"
+//        
+//        self.lists.append(list1)
+//        
+//        list2.title = "Better don't forget or else!!!"
+//        
+//        self.lists.append(list2)
         
         self.tableView.reloadData()
     }
