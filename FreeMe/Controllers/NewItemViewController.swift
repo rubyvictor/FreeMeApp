@@ -32,7 +32,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Do any additional setup after loading the view.
         
         nameTextField.attributedPlaceholder = NSAttributedString(string:"item name",
-                                                               attributes:[NSForegroundColorAttributeName: UIColor.greenColor()])
+                                                                 attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
@@ -42,7 +42,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         dict1["categoryNum"] = NSNumber(integer: 1)
         dict1["categoryName"] = "Beverages"
         dict1["imageUrl"] = "https://"
-        dict1["imageFilename"] = "beverage"
+        dict1["imageFilename"] = "beverages"
         dict1["highlightedImageFilename"] = "highlightedBeverage"
         arrayOfCategories.append(dict1)
         

@@ -32,7 +32,7 @@
 		874D0FBA6F7FFB3BD1DC6D5B /* Pods-FreeMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMe/Pods-FreeMe.release.xcconfig"; sourceTree = "<group>"; };
 		B1067A771D37CAB2006A2375 /* DisplayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayListViewController.swift; sourceTree = "<group>"; };
 		B1067A791D37CC39006A2375 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		B1067A7B1D37D7B7006A2375 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		B1067A7B1D37D7B7006A2375 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B1067A7C1D37E650006A2375 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		B1067A7E1D37E751006A2375 /* CategoryCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCVCell.swift; sourceTree = "<group>"; };
 		B1090D4A1D336E7000EBD7F6 /* FreeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
