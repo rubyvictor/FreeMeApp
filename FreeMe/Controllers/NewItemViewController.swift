@@ -23,6 +23,8 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
     var list: List?
     
     var selectedCategory: Int!
+    
+//    var newDictionary = [String: [Item]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,6 +135,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         dict16["categoryName"] = "Pets"
         dict16["imageFilename"] = "pets"
         arrayOfCategories.append(dict16)
+        
         
         categoryCollectionView.reloadData()
     }
