@@ -54,7 +54,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Lists" id="S1P-0A-heA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Hh-5g-XUx">
-                            <color key="tintColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="TzL-Pj-BEB" kind="show" identifier="addList" id="hfx-dd-AHU"/>
                             </connections>
@@ -124,6 +124,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="7Oq-g1-PVK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Glj-jv-nLJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="gJ8-CY-EBt" kind="show" identifier="goToNewItemVC" id="lqG-4b-9Rg"/>
                             </connections>
@@ -167,7 +168,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add List" id="UT0-17-Ru4">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nKq-8H-3JC">
-                            <color key="tintColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="saveAction" destination="TzL-Pj-BEB" id="jVd-N7-Llj"/>
                             </connections>
@@ -239,9 +240,9 @@
                             </collectionView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-Nf-kYI">
                                 <rect key="frame" x="16" y="112" width="288" height="30"/>
-                                <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -266,7 +267,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="I6n-Pl-gP9" firstAttribute="top" secondItem="Oec-nY-Ikq" secondAttribute="bottom" id="35Q-s5-APw"/>
                             <constraint firstItem="Oec-nY-Ikq" firstAttribute="width" secondItem="YKs-Nf-kYI" secondAttribute="width" id="5LN-NQ-fPG"/>
@@ -291,6 +292,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="emW-np-qBx">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="fXv-v4-BLV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="saveAction" destination="gJ8-CY-EBt" id="mdD-34-oYI"/>
                             </connections>

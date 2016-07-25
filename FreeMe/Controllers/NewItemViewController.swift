@@ -32,7 +32,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Do any additional setup after loading the view.
         
         nameTextField.attributedPlaceholder = NSAttributedString(string:"item name",
-                                                               attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+                                                               attributes:[NSForegroundColorAttributeName: UIColor.greenColor()])
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
@@ -186,8 +186,8 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         //Check for item name text field whether blank
         if isTextFieldBlank(nameTextField) || selectedCategory == nil {
             errorLabel.text = "Enter item name and click category"
-            errorLabel.textColor = UIColor(red: 90.0/255.0, green: 200.0/255.0, blue: 250.0/255.0, alpha: 1)
-        return
+            errorLabel.textColor = UIColor.whiteColor()
+            return
         }
         
     
