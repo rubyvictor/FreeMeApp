@@ -43,97 +43,112 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         dict1["categoryName"] = "Beverages"
         dict1["imageUrl"] = "https://"
         dict1["imageFilename"] = "beverages"
-        dict1["highlightedImageFilename"] = "highlightedBeverage"
+        dict1["highlightedImageFilename"] = "highlightedbeverages"
         arrayOfCategories.append(dict1)
         
         let dict2 = NSMutableDictionary()
         dict2["categoryNum"] = NSNumber(integer: 2)
         dict2["categoryName"] = "Grains"
         dict2["imageFilename"] = "grains"
+        dict2["highlightedImageFilename"] = "highlightedgrains"
         arrayOfCategories.append(dict2)
         
         let dict3 = NSMutableDictionary()
         dict3["categoryNum"] = NSNumber(integer: 3)
         dict3["categoryName"] = "Vegetables"
         dict3["imageFilename"] = "vegetables"
+        dict3["highlightedImageFilename"] = "highlightedvegetables"
         arrayOfCategories.append(dict3)
         
         let dict4 = NSMutableDictionary()
         dict4["categoryNum"] = NSNumber(integer: 4)
         dict4["categoryName"] = "CannedFood"
         dict4["imageFilename"] = "cannedfood"
+        dict4["highlightedImageFilename"] = "highlightedcannedfood"
         arrayOfCategories.append(dict4)
         
         let dict5 = NSMutableDictionary()
         dict5["categoryNum"] = NSNumber(integer: 5)
         dict5["categoryName"] = "Dairy"
         dict5["imageFilename"] = "dairy"
+        dict5["highlightedImageFilename"] = "highlighteddairy"
         arrayOfCategories.append(dict5)
         
         let dict6 = NSMutableDictionary()
         dict6["categoryNum"] = NSNumber(integer: 6)
         dict6["categoryName"] = "Baking"
         dict6["imageFilename"] = "baking"
+        dict6["highlightedImageFilename"] = "highlightedbaking"
         arrayOfCategories.append(dict6)
         
         let dict7 = NSMutableDictionary()
         dict7["categoryNum"] = NSNumber(integer: 7)
         dict7["categoryName"] = "FrozenFood"
         dict7["imageFilename"] = "frozenfood"
+        dict7["highlightedImageFilename"] = "highlightedfrozenfood"
         arrayOfCategories.append(dict7)
         
         let dict8 = NSMutableDictionary()
         dict8["categoryNum"] = NSNumber(integer: 8)
         dict8["categoryName"] = "Meat"
         dict8["imageFilename"] = "meat"
+        dict8["highlightedImageFilename"] = "highlightedmeat"
         arrayOfCategories.append(dict8)
         
         let dict9 = NSMutableDictionary()
         dict9["categoryNum"] = NSNumber(integer: 9)
         dict9["categoryName"] = "Fruits"
         dict9["imageFilename"] = "fruits"
+        dict9["highlightedImageFilename"] = "highlightedfruits"
         arrayOfCategories.append(dict9)
         
         let dict10 = NSMutableDictionary()
         dict10["categoryNum"] = NSNumber(integer: 10)
         dict10["categoryName"] = "Toiletries"
         dict10["imageFilename"] = "toiletries"
+        dict10["highlightedImageFilename"] = "highlightedtoiletries"
         arrayOfCategories.append(dict10)
         
         let dict11 = NSMutableDictionary()
         dict11["categoryNum"] = NSNumber(integer: 11)
         dict11["categoryName"] = "Seafood"
         dict11["imageFilename"] = "seafood"
+        dict11["highlightedImageFilename"] = "highlightedseafood"
         arrayOfCategories.append(dict11)
         
         let dict12 = NSMutableDictionary()
         dict12["categoryNum"] = NSNumber(integer: 12)
         dict12["categoryName"] = "DryFoods"
         dict12["imageFilename"] = "dryfoods"
+        dict12["highlightedImageFilename"] = "highlighteddryfoods"
         arrayOfCategories.append(dict12)
         
         let dict13 = NSMutableDictionary()
         dict13["categoryNum"] = NSNumber(integer: 13)
         dict13["categoryName"] = "Cleaning"
         dict13["imageFilename"] = "cleaning"
+        dict13["highlightedImageFilename"] = "highlightedcleaning"
         arrayOfCategories.append(dict13)
         
         let dict14 = NSMutableDictionary()
         dict14["categoryNum"] = NSNumber(integer: 14)
         dict14["categoryName"] = "BabyCare"
         dict14["imageFilename"] = "babycare"
+        dict14["highlightedImageFilename"] = "highlightedbabycare"
         arrayOfCategories.append(dict14)
         
         let dict15 = NSMutableDictionary()
         dict15["categoryNum"] = NSNumber(integer: 15)
         dict15["categoryName"] = "Auto"
         dict15["imageFilename"] = "auto"
+        dict15["highlightedImageFilename"] = "highlightedauto"
         arrayOfCategories.append(dict15)
         
         let dict16 = NSMutableDictionary()
         dict16["categoryNum"] = NSNumber(integer: 16)
         dict16["categoryName"] = "Pets"
         dict16["imageFilename"] = "pets"
+        dict16["highlightedImageFilename"] = "highlightedpets"
         arrayOfCategories.append(dict16)
         
         
@@ -168,9 +183,10 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         let category = arrayOfCategories[indexPath.item]
         
         let imageName = category["imageFilename"] as! String
+        let highlightedImageName = category["highlightedImageFilename"] as! String
         
         cell.imageView.image = UIImage(named: imageName)
-//        cell.imageView.highlightedImage = UIImage(named: "highlightedBeverage")
+        cell.imageView.highlightedImage = UIImage(named: highlightedImageName)
         
         return cell
     }
