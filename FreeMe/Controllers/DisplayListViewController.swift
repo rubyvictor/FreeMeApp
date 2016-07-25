@@ -71,6 +71,9 @@ class DisplayListViewController: UITableViewController {
         //assign property into instance cell
         
         cell.mySwitch.on = item.itemState
+        
+        cell.setBackgroundColor()
+        
         cell.itemNameLabel.text = item.name
         cell.categoryNameLabel.text = item.categoryNameForCategoryNum()
         
