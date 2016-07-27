@@ -79,32 +79,29 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemIdentifier" rowHeight="90" id="sT3-xD-5oI" customClass="ItemTableViewCell" customModule="FreeMe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="114" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sT3-xD-5oI" id="Pp6-Al-Mi6">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" tableViewCell="sT3-xD-5oI" id="Pp6-Al-Mi6">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Sx-5u-NZE">
-                                            <rect key="frame" x="28" y="22" width="51" height="31"/>
+                                            <rect key="frame" x="28" y="29" width="51" height="31"/>
                                             <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="switchClicked:" destination="sT3-xD-5oI" eventType="valueChanged" id="sOF-D0-QQd"/>
                                             </connections>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K30-Q1-VLm">
-                                            <rect key="frame" x="107" y="22" width="196" height="28"/>
+                                            <rect key="frame" x="92" y="31" width="104" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <color key="shadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="0.37" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="9Sx-5u-NZE" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="14" id="83b-p9-Lw6"/>
-                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="leading" secondItem="9Sx-5u-NZE" secondAttribute="trailing" constant="30" id="S3p-kL-qQz"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="K30-Q1-VLm" secondAttribute="trailing" constant="9" id="dVe-BF-YsJ"/>
-                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="14" id="f7t-ZD-6Xj"/>
+                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="centerY" secondItem="Pp6-Al-Mi6" secondAttribute="centerY" id="0AK-yB-8Qf"/>
+                                        <constraint firstItem="9Sx-5u-NZE" firstAttribute="centerY" secondItem="Pp6-Al-Mi6" secondAttribute="centerY" id="A9f-yz-ETI"/>
+                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="leading" secondItem="9Sx-5u-NZE" secondAttribute="trailing" constant="15" id="S3p-kL-qQz"/>
                                         <constraint firstItem="9Sx-5u-NZE" firstAttribute="leading" secondItem="Pp6-Al-Mi6" secondAttribute="leadingMargin" constant="20" id="oJj-Oo-bR2"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -208,8 +205,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATn-Sj-ymQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATn-Sj-ymQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -231,8 +228,8 @@
                                     </mask>
                                 </variation>
                             </collectionView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-Nf-kYI">
-                                <rect key="frame" x="16" y="112" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="item name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-Nf-kYI">
+                                <rect key="frame" x="16" y="112" width="288" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

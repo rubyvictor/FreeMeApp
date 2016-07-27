@@ -107,5 +107,9 @@ class List: Object {
         return sumItems
     }
     
+    func removeItems() -> Int {
+        
+    }
+    
 
 }
