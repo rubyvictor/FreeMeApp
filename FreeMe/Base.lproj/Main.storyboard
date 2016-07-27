@@ -84,14 +84,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Sx-5u-NZE">
-                                            <rect key="frame" x="38" y="22" width="51" height="31"/>
+                                            <rect key="frame" x="28" y="22" width="51" height="31"/>
                                             <color key="onTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="switchClicked:" destination="sT3-xD-5oI" eventType="valueChanged" id="sOF-D0-QQd"/>
                                             </connections>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K30-Q1-VLm">
-                                            <rect key="frame" x="145" y="26" width="158" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K30-Q1-VLm">
+                                            <rect key="frame" x="107" y="22" width="196" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -102,10 +102,10 @@
                                     <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="0.37" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="9Sx-5u-NZE" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="14" id="83b-p9-Lw6"/>
-                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="leading" secondItem="9Sx-5u-NZE" secondAttribute="trailing" constant="58" id="S3p-kL-qQz"/>
+                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="leading" secondItem="9Sx-5u-NZE" secondAttribute="trailing" constant="30" id="S3p-kL-qQz"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="K30-Q1-VLm" secondAttribute="trailing" constant="9" id="dVe-BF-YsJ"/>
-                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="18" id="f7t-ZD-6Xj"/>
-                                        <constraint firstItem="9Sx-5u-NZE" firstAttribute="leading" secondItem="Pp6-Al-Mi6" secondAttribute="leadingMargin" constant="30" id="oJj-Oo-bR2"/>
+                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="14" id="f7t-ZD-6Xj"/>
+                                        <constraint firstItem="9Sx-5u-NZE" firstAttribute="leading" secondItem="Pp6-Al-Mi6" secondAttribute="leadingMargin" constant="20" id="oJj-Oo-bR2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
