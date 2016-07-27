@@ -21,16 +21,16 @@ class Item {
     var itemState: Bool = false
     var itemCategory: Category = .Beverages
 //    var quantity: Int
-//    var itemCount: Int
+    var itemCount: Int
     
     init(name: String, itemState: Bool, itemCategory: Category, count: Int) {
         self.name = name
         self.itemState = itemState
         self.itemCategory = itemCategory
 //        self.quantity = quantity
-//        self.itemCount = count
+        self.itemCount = count
     }
-    //TODO:  make it work then make it good.
+    
     func categoryNameForCategoryNum() -> String {
         
         let cat = self.itemCategory

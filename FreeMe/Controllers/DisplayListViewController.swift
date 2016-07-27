@@ -13,12 +13,9 @@ class DisplayListViewController: UITableViewController {
     
     var list: List?
     
-    //VLTODO:  sectionNames = arrayOfCategories from which keys are known as categoryName
-    //VLTODO:  items in section = arrayOfItems of which values not known
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         if let list = list {
             
@@ -30,7 +27,7 @@ class DisplayListViewController: UITableViewController {
         else {
             
         }
-        
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,38 +42,55 @@ class DisplayListViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        let header:UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        
+        header.textLabel!.font = UIFont.italicSystemFontOfSize(20)
+//        header.textLabel!.font = UIFont.case
+        
+        //boldSystemFontOfSize(20)
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
-
-        //VLTODO: need to return count of array here
+//        return 1
+        return list!.getNumberOfSections()
+        
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return list!.getHeaderFromSection(section)
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return the number of rows in section
-        return list!.arrayOfItems.count
+       
         
-        //VLTODO: need to return list!.arrayOfItems[section].count -1
+        return list!.getNumberOfRowsInSection(section)
+        
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("itemIdentifier", forIndexPath: indexPath) as! ItemTableViewCell
         
+        let item = list!.getValueFromRow(indexPath.row, section: indexPath.section)
         
-        // VLTODO:...Need [indexPath.section] for the cell
-        let item = list!.arrayOfItems[indexPath.row]
+//        assign property into instance cell
         
-        //assign property into instance cell
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
+//        tableView.sectionHeaderHeight = 10
+        
         
         cell.mySwitch.on = item.itemState
         
         cell.setBackgroundColor()
         
         cell.itemNameLabel.text = item.name
-        cell.categoryNameLabel.text = item.categoryNameForCategoryNum()
-        
+//        cell.categoryNameLabel.text = item.categoryNameForCategoryNum()
         
         cell.item = item //by doing this we are assigning a specific item to the cell's property
         

@@ -64,8 +64,11 @@ class ListListTableViewController: UITableViewController {
         
         cell.listModificationTimeLabel.text = list.modificationTime.convertToString()
         
-        cell.listNumberOfItemsLabel.text = "\(list.count) items "
+        cell.listNumberOfItemsLabel.text = "\(list.countItems()) items"
+        //call addItem func here
         //use interpolation to display quantity
+        
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         return cell
     }

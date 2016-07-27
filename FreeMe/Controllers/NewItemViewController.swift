@@ -211,7 +211,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Category(rawValue: selectedCategory)!, count: Int())
         
-        list?.arrayOfItems.append(newItem)
+        list?.addNewItem(newItem)
         
         //go back to previous screen
         
