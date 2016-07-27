@@ -90,35 +90,25 @@
                                                 <action selector="switchClicked:" destination="sT3-xD-5oI" eventType="valueChanged" id="sOF-D0-QQd"/>
                                             </connections>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K30-Q1-VLm">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K30-Q1-VLm">
                                             <rect key="frame" x="145" y="26" width="158" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCJ-S7-hlu">
-                                            <rect key="frame" x="145" y="8" width="158" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="shadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="0.37" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="9Sx-5u-NZE" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="14" id="83b-p9-Lw6"/>
                                         <constraint firstItem="K30-Q1-VLm" firstAttribute="leading" secondItem="9Sx-5u-NZE" secondAttribute="trailing" constant="58" id="S3p-kL-qQz"/>
-                                        <constraint firstItem="iCJ-S7-hlu" firstAttribute="width" secondItem="K30-Q1-VLm" secondAttribute="width" id="ZOo-20-ozj"/>
-                                        <constraint firstItem="iCJ-S7-hlu" firstAttribute="leading" secondItem="K30-Q1-VLm" secondAttribute="leading" id="d1R-EX-SZI"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="K30-Q1-VLm" secondAttribute="trailing" constant="9" id="dVe-BF-YsJ"/>
                                         <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="Pp6-Al-Mi6" secondAttribute="topMargin" constant="18" id="f7t-ZD-6Xj"/>
-                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="iCJ-S7-hlu" secondAttribute="bottom" constant="-3" id="mfe-BA-X6P"/>
                                         <constraint firstItem="9Sx-5u-NZE" firstAttribute="leading" secondItem="Pp6-Al-Mi6" secondAttribute="leadingMargin" constant="30" id="oJj-Oo-bR2"/>
-                                        <constraint firstItem="K30-Q1-VLm" firstAttribute="top" secondItem="iCJ-S7-hlu" secondAttribute="bottom" constant="-3" id="zXe-Wx-16Q"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="categoryNameLabel" destination="iCJ-S7-hlu" id="UOZ-D4-JmF"/>
                                     <outlet property="itemNameLabel" destination="K30-Q1-VLm" id="rPH-rR-kxM"/>
                                     <outlet property="mySwitch" destination="9Sx-5u-NZE" id="OyY-Ai-pCe"/>
                                 </connections>
