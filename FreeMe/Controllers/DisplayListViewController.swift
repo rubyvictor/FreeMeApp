@@ -90,7 +90,7 @@ class DisplayListViewController: UITableViewController {
         cell.setBackgroundColor()
         
         cell.itemNameLabel.text = item.name
-//        cell.categoryNameLabel.text = item.categoryNameForCategoryNum()
+
         
         cell.item = item //by doing this we are assigning a specific item to the cell's property
         
@@ -109,10 +109,8 @@ class DisplayListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            //add "if.. else if" code here to delete the list or to show the delete button when swiped
             
-            
-            list!.arrayOfItems.removeAtIndex(indexPath.row)
+            list!.removeValueAtIndexPath(indexPath)
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
