@@ -108,14 +108,28 @@ class DisplayListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
         if editingStyle == .Delete {
             
+            
+            //change the model first to check for row numbers. Originally can delete one row in a section, but not a row in a 2-row section simultaneously.
+            let numberOfRows = list!.getNumberOfRowsInSection(indexPath.section)
+            
+            //Next, update the model before the view, because the view is based on the model
             list!.removeValueAtIndexPath(indexPath)
             
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            //now update the views
+            if numberOfRows > 1 {
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            } else {
+                let indexSet = NSMutableIndexSet()
+                indexSet.addIndex(indexPath.section)
+                tableView.deleteSections(indexSet, withRowAnimation: UITableViewRowAnimation.Fade)
+            }
+            
         }
     }
-    
+}
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -161,5 +175,5 @@ class DisplayListViewController: UITableViewController {
     }
     */
 
-}
+    
 

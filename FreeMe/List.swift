@@ -109,12 +109,12 @@ class List: Object {
     
     //Takes valid index path, removes item corresponding to that index path
     func removeValueAtIndexPath(indexPath: NSIndexPath) -> Item {
-//        go into key belonging to the section, and retrieve the value of that key
+        
+        //go into key belonging to the section, and retrieve the value of that key
         //find the row for that value and then delete that row
+        
         return listDict[getHeaderFromSection(indexPath.section)]!.removeAtIndex(indexPath.row)
         
-        
     }
-
 
 }
