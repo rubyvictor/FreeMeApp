@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class NewListViewController: UIViewController {
     
@@ -53,17 +55,22 @@ class NewListViewController: UIViewController {
             return
         }
         
+//      TODO realm:
+//      Generate a new list
+//      Save list to Realm
         let newList = List()
-        
-//        newList.title = "new grocery new list"
+//      newList.title = "new grocery new list"
         newList.title = newListTitleTextField.text!
         
-        listListVC?.lists.append(newList)
+//      save to realm
+        RealmHelper.addList(newList)
+        
+        //listListVC?.lists.append(newList)
         
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    //segue to pass self.list weak var??
+    
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //        
 //        if segue.identifier == "goToListList" {

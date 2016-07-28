@@ -11,7 +11,7 @@ import RealmSwift
 
 class RealmHelper {
     //static methods go here
-    //realm save object, not array
+    //realm can save array
     
     
     static func addList(list: List){
@@ -26,12 +26,12 @@ class RealmHelper {
             realm.delete(list)
         }
     }
-    static func updateList(listToBeUpdated: List, newlist: List){
+    static func updateList(listToBeUpdated: List, newDict: [String : [Item]]){
         let realm = try! Realm()
         try! realm.write {
-            listToBeUpdated.title = newlist.title
+            listToBeUpdated.listDict = newDict
 //            listToBeUpdated.arrayOfItems = .arrayOfItems
-            listToBeUpdated.modificationTime = newlist.modificationTime
+            listToBeUpdated.modificationTime = NSDate()
             
         }
     }

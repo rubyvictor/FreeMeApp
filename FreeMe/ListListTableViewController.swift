@@ -9,14 +9,21 @@
 import UIKit
 import Foundation
 import RealmSwift
+import Realm
 
 class ListListTableViewController: UITableViewController {
     
-    var lists: [List] = []
+    
+    var lists: Results<List>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.reloadData()
+        
+        lists = RealmHelper.retrieveList()
+        
+//        Initial Test Data
 //        let list1 = List()
 //        let list2 = List()
 //        
@@ -40,7 +47,7 @@ class ListListTableViewController: UITableViewController {
 //        
 //        self.lists.append(list2)
         
-        self.tableView.reloadData()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -50,7 +57,7 @@ class ListListTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lists.count
+        return lists!.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -58,7 +65,7 @@ class ListListTableViewController: UITableViewController {
         
         let row = indexPath.row
         
-        let list = lists[row]
+        let list = lists![row]
         
         cell.listTitleLabel.text = list.title
         
@@ -86,7 +93,7 @@ class ListListTableViewController: UITableViewController {
                 
                 let indexPath = tableView.indexPathForSelectedRow!
                 
-                let list = lists[indexPath.row]
+                let list = lists![indexPath.row]
                 
                 let displayListViewController = segue.destinationViewController as! DisplayListViewController
                 
@@ -95,7 +102,6 @@ class ListListTableViewController: UITableViewController {
             }
             else if identifier == "addList" {
                 print("+ button tapped")
-                
                 
                 let newListViewController = segue.destinationViewController as! NewListViewController
                 
@@ -109,8 +115,14 @@ class ListListTableViewController: UITableViewController {
         if editingStyle == .Delete {
             //add "if.. else if" code here to delete the list or to show the delete button when swiped
 
+            //TODO: Save deletion to Realm
+            let deletedList = lists![indexPath.row]
             
-            lists.removeAtIndex(indexPath.row)
+            RealmHelper.deleteList(deletedList)
+            
+            //TODO: get all the lists, put them in our list array
+            
+            lists = RealmHelper.retrieveList()
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             

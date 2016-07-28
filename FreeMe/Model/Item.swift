@@ -88,7 +88,7 @@ class Item {
         }
     }
     
-    //TODO: try a switch for better practice
+    
     
     func integerForCategory() -> Int {
         

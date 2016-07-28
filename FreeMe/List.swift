@@ -9,51 +9,29 @@
 import UIKit
 import Foundation
 import RealmSwift
+import Realm
 
 
 class List: Object {
-    
-    
-    
-    
-    var listDict : [String : [Item]] = ["Beverages": [], "Grains": [], "Vegetables": [], "CannedFood": [], "Dairy": [], "Baking": [], "FrozenFood": [], "Meat": [], "Fruits": [], "Toiletries": [], "Seafood":[], "DryFoods": [], "Cleaning": [], "BabyCare": [], "Auto": [], "Pets": []]
-    
-   
-    
-    
-    var arrayOfItems: [Item] = []
-    var title: String = ""
-    
-    var modificationTime = NSDate()
-    var count: Int {
-        get {
-//             rely on the array count but still use custom get function
-//            var sumCount = 0
-//            for item in arrayOfItems {
-//                sumCount += [item].count
-//            }
-            return arrayOfItems.count
+
+    var listDict : [String : [Item]] = ["Beverages": [], "Grains": [], "Vegetables": [], "CannedFood": [], "Dairy": [], "Baking": [], "FrozenFood": [], "Meat": [], "Fruits": [], "Toiletries": [], "Seafood":[], "DryFoods": [], "Cleaning": [], "BabyCare": [], "Auto": [], "Pets": []] {
+        didSet{
+            
+            //TODO: Update Realm
+            RealmHelper.updateList(self, newDict: listDict)
+            
         }
     }
-    
-    
-    
-    //create new func to calculate rows for display
-//    func getListDictCount() -> Int {
-//        
-//            var sumDict = 0
-//            for item in listDict.values {
-//                sumDict += item.count
-//            }
-//        return sumDict
-//    }
-    
+    var title: String = ""
+    var modificationTime = NSDate()
+
     //$0 refers to the object at hand.  Goin thru each element, element needs to be represented
     //Returns the header - which is a key in the dictionary - corresponding to the section number
     func getHeaderFromSection(section:Int) -> String{
         let mySortedKeys = getOrderedHeaders()
         return mySortedKeys[section]
     }
+    
     // Look into the listDict.keys.filter and find values that are not empty and return the keys then sort them. well ordered == reliably.
     func getOrderedHeaders() -> [String] {
         return listDict.keys.filter {
@@ -61,6 +39,7 @@ class List: Object {
         } .sort()
         
     }
+    
     //get the values from the section given
     func getValuesFromSection(section: Int) -> [Item] {
         return listDict[getHeaderFromSection(section)]!
@@ -99,7 +78,6 @@ class List: Object {
     func countItems() -> Int {
         //get all the section headers.
         //find all values in the dict using those headers and sum them up.
-        
         var sumItems = 0
         for header in getOrderedHeaders() {
             sumItems += listDict[header]!.count
@@ -109,12 +87,9 @@ class List: Object {
     
     //Takes valid index path, removes item corresponding to that index path
     func removeValueAtIndexPath(indexPath: NSIndexPath) -> Item {
-        
         //go into key belonging to the section, and retrieve the value of that key
         //find the row for that value and then delete that row
-        
         return listDict[getHeaderFromSection(indexPath.section)]!.removeAtIndex(indexPath.row)
-        
     }
 
 }
