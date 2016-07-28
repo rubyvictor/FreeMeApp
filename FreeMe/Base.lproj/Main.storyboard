@@ -137,24 +137,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="groceries" translatesAutoresizingMaskIntoConstraints="NO" id="kY8-BR-dLI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groceries" translatesAutoresizingMaskIntoConstraints="NO" id="kY8-BR-dLI">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="tintColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter title of list" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-Ei-D0q">
-                                <rect key="frame" x="20" y="109" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter title of list" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-Ei-D0q">
+                                <rect key="frame" x="20" y="94" width="280" height="30"/>
                                 <color key="tintColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-PF-ytb">
-                                <rect key="frame" x="20" y="80" width="146" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-PF-ytb">
+                                <rect key="frame" x="20" y="86" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tDd-Ei-D0q" firstAttribute="top" secondItem="gtd-CE-TH7" secondAttribute="bottom" constant="30" id="AXp-eA-vXg"/>
+                            <constraint firstItem="tDd-Ei-D0q" firstAttribute="leading" secondItem="HPK-PF-ytb" secondAttribute="leading" id="DMK-4n-vju"/>
+                            <constraint firstItem="kY8-BR-dLI" firstAttribute="top" secondItem="gtd-CE-TH7" secondAttribute="bottom" id="EjP-NP-qBR"/>
+                            <constraint firstItem="tDd-Ei-D0q" firstAttribute="top" secondItem="HPK-PF-ytb" secondAttribute="bottom" constant="8" symbolic="YES" id="Kcg-el-04x"/>
+                            <constraint firstItem="kY8-BR-dLI" firstAttribute="bottom" secondItem="8XS-mw-qde" secondAttribute="top" id="TG7-xL-Tl5"/>
+                            <constraint firstItem="tDd-Ei-D0q" firstAttribute="centerX" secondItem="kY8-BR-dLI" secondAttribute="centerX" id="ayx-Xc-f4T"/>
+                            <constraint firstItem="tDd-Ei-D0q" firstAttribute="leading" secondItem="u86-TK-XxQ" secondAttribute="leadingMargin" constant="4" id="leE-7o-38g"/>
+                            <constraint firstItem="kY8-BR-dLI" firstAttribute="leading" secondItem="u86-TK-XxQ" secondAttribute="leading" id="r58-jp-zZQ"/>
+                            <constraint firstItem="tDd-Ei-D0q" firstAttribute="centerX" secondItem="u86-TK-XxQ" secondAttribute="centerX" id="vZ4-AC-eM4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add List" id="UT0-17-Ru4">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nKq-8H-3JC">
