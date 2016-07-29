@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 
 
 class DisplayListViewController: UITableViewController {
     
-    var list: List?
+    dynamic var list: List?
     
     override func viewDidLoad() {
         super.viewDidLoad()

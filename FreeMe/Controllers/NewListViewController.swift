@@ -18,7 +18,7 @@ class NewListViewController: UIViewController {
     @IBOutlet weak var listErrorLabel: UILabel!
     
     weak var listListVC: ListListTableViewController?
-    
+    //TODO: possible issue with listListVC on why new list not showing immediatelely and not counting number of items
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ class NewListViewController: UIViewController {
 //      save to realm
         RealmHelper.addList(newList)
         
-        //listListVC?.lists.append(newList)
+//        listListVC?.lists.append(newList)
         
         self.navigationController?.popViewControllerAnimated(true)
     }

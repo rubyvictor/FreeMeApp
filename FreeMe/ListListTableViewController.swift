@@ -13,13 +13,15 @@ import Realm
 
 class ListListTableViewController: UITableViewController {
     
-    
-    var lists: Results<List>?
+    //add didSet here for reloadData() to solve the no-show on first add list.
+    var lists: Results<List>? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.reloadData()
         
         lists = RealmHelper.retrieveList()
         
@@ -49,14 +51,16 @@ class ListListTableViewController: UITableViewController {
         
         
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
-        
-        self.tableView.reloadData()
-    }
 
+    override func viewDidAppear(animated: Bool) {
+        lists = RealmHelper.retrieveList()
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if lists == nil {
+            return 0
+        }
         return lists!.count
     }
 
@@ -71,9 +75,10 @@ class ListListTableViewController: UITableViewController {
         
         cell.listModificationTimeLabel.text = list.modificationTime.convertToString()
         
-        cell.listNumberOfItemsLabel.text = "\(list.countItems()) items"
         //call addItem func here
         //use interpolation to display quantity
+        
+        cell.listNumberOfItemsLabel.text = "\(list.countItems()) items"
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
@@ -122,7 +127,7 @@ class ListListTableViewController: UITableViewController {
             
             //TODO: get all the lists, put them in our list array
             
-            lists = RealmHelper.retrieveList()
+//            lists = RealmHelper.retrieveList()
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             

@@ -14,16 +14,11 @@ import Realm
 
 class List: Object {
 
-    var listDict : [String : [Item]] = ["Beverages": [], "Grains": [], "Vegetables": [], "CannedFood": [], "Dairy": [], "Baking": [], "FrozenFood": [], "Meat": [], "Fruits": [], "Toiletries": [], "Seafood":[], "DryFoods": [], "Cleaning": [], "BabyCare": [], "Auto": [], "Pets": []] {
-        didSet{
-            
-            //TODO: Update Realm
-            RealmHelper.updateList(self, newDict: listDict)
-            
-        }
-    }
-    var title: String = ""
-    var modificationTime = NSDate()
+    var listDict : [String : [Item]] = ["Beverages": [], "Grains": [], "Vegetables": [], "CannedFood": [], "Dairy": [], "Baking": [], "FrozenFood": [], "Meat": [], "Fruits": [], "Toiletries": [], "Seafood":[], "DryFoods": [], "Cleaning": [], "BabyCare": [], "Auto": [], "Pets": []]
+    
+
+    dynamic var title: String = ""
+    dynamic var modificationTime = NSDate()
 
     //$0 refers to the object at hand.  Goin thru each element, element needs to be represented
     //Returns the header - which is a key in the dictionary - corresponding to the section number
@@ -71,6 +66,7 @@ class List: Object {
         } else {
             listDict[item.categoryNameForCategoryNum()]? = [item]
         }
+        RealmHelper.updateList(self, newDict: listDict)
         return [item]
     
     }
@@ -82,6 +78,7 @@ class List: Object {
         for header in getOrderedHeaders() {
             sumItems += listDict[header]!.count
         }
+        
         return sumItems
     }
     
