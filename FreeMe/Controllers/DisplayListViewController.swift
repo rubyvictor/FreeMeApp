@@ -19,7 +19,6 @@ class DisplayListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         if let list = list {
             
             self.title = list.title
@@ -30,7 +29,7 @@ class DisplayListViewController: UITableViewController {
         else {
             
         }
-     
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +39,10 @@ class DisplayListViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        //TOFIX:
         
         self.tableView.reloadData()
+        
     }
 
     // MARK: - Table view data source
@@ -51,28 +52,21 @@ class DisplayListViewController: UITableViewController {
         let header:UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
         
         header.textLabel!.font = UIFont.italicSystemFontOfSize(20)
-//        header.textLabel!.font = UIFont.case
-        
         //boldSystemFontOfSize(20)
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-//        return 1
         return list!.getNumberOfSections()
         
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
         return list!.getHeaderFromSection(section)
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        
-        return list!.getNumberOfRowsInSection(section)
-        
+       return list!.getNumberOfRowsInSection(section)
     }
 
     
@@ -81,21 +75,14 @@ class DisplayListViewController: UITableViewController {
         
         let item = list!.getValueFromRow(indexPath.row, section: indexPath.section)
         
-//        assign property into instance cell
-        
+        //assign property into instance cell
+        //tableView.sectionHeaderHeight = 10
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        
-//        tableView.sectionHeaderHeight = 10
-        
-        
         cell.mySwitch.on = item.itemState
-        
         cell.setBackgroundColor()
-        
         cell.itemNameLabel.text = item.name
-
-        
-        cell.item = item //by doing this we are assigning a specific item to the cell's property
+        cell.item = item
+        //by doing this we are assigning a specific item to the cell's property
         
         return cell
     }
@@ -105,7 +92,6 @@ class DisplayListViewController: UITableViewController {
         if segue.identifier == "goToNewItemVC" {
             
             let newItemVC = segue.destinationViewController as! NewItemViewController
-            
             newItemVC.list = list!
         }
     }

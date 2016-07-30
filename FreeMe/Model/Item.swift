@@ -9,26 +9,40 @@
 import UIKit
 import Foundation
 import RealmSwift
+import Realm
 
 
 enum Category: Int {
     case Beverages = 1, Grains, Vegetables, CannedFood, Dairy, Baking, FrozenFood, Meat, Fruits, Toiletries, Seafood, DryFoods, Cleaning, BabyCare, Auto, Pets
 }
 
-class Item {
+class Item: Object {
     
-    var name: String = ""
-    var itemState: Bool = false
+    dynamic var name: String = ""
+    dynamic var itemState: Bool = false
     var itemCategory: Category = .Beverages
-//    var quantity: Int
-    var itemCount: Int
+//var quantity: Int
+    dynamic var itemCount: Int = 0
     
     init(name: String, itemState: Bool, itemCategory: Category, count: Int) {
         self.name = name
         self.itemState = itemState
         self.itemCategory = itemCategory
-//        self.quantity = quantity
+//self.quantity = quantity
         self.itemCount = count
+        super.init()
+    }
+    
+    required init() {
+        super.init()
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
+        super.init(realm: realm, schema: schema)
+    }
+    
+    required init(value: AnyObject, schema: RLMSchema) {
+        super.init(value: value, schema: schema)
     }
     
     func categoryNameForCategoryNum() -> String {

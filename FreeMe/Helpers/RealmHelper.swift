@@ -32,7 +32,7 @@ class RealmHelper {
             listToBeUpdated.listDict = newDict
 //            listToBeUpdated.arrayOfItems = .arrayOfItems
             listToBeUpdated.modificationTime = NSDate()
-//            listToBeUpdated.countItems()
+            
             
         }
     }

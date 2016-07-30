@@ -209,7 +209,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
     
-        //save to array
+        //save to array and Realm
         let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Category(rawValue: selectedCategory)!, count: Int())
         
         list?.addNewItem(newItem)
