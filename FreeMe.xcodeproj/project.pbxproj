@@ -20,6 +20,7 @@
 		B1090D601D3387BF00EBD7F6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D5F1D3387BF00EBD7F6 /* List.swift */; };
 		B1090D6D1D339F2E00EBD7F6 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1090D6C1D339F2E00EBD7F6 /* RealmHelper.swift */; };
 		B10A7B171D354F34002DD376 /* NSDate+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A7B161D354F34002DD376 /* NSDate+convertToString.swift */; };
+		B10EA8E01D4E792B00A6004A /* NLNavControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10EA8DF1D4E792B00A6004A /* NLNavControllerDelegate.swift */; };
 		B11E282D1D34914700C88663 /* ListListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E282C1D34914700C88663 /* ListListTableViewController.swift */; };
 		B11E28321D34A5DC00C88663 /* ListListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11E28311D34A5DC00C88663 /* ListListTableViewCell.swift */; };
 		B16106721D3771D50072CF87 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16106711D3771D50072CF87 /* Item.swift */; };
@@ -45,6 +46,7 @@
 		B1090D5F1D3387BF00EBD7F6 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../List.swift; sourceTree = "<group>"; };
 		B1090D6C1D339F2E00EBD7F6 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		B10A7B161D354F34002DD376 /* NSDate+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+convertToString.swift"; sourceTree = "<group>"; };
+		B10EA8DF1D4E792B00A6004A /* NLNavControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLNavControllerDelegate.swift; sourceTree = "<group>"; };
 		B11E282C1D34914700C88663 /* ListListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListListTableViewController.swift; path = ../ListListTableViewController.swift; sourceTree = "<group>"; };
 		B11E28311D34A5DC00C88663 /* ListListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListListTableViewCell.swift; sourceTree = "<group>"; };
 		B16106711D3771D50072CF87 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		B1090D6B1D339F0700EBD7F6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B10EA8DF1D4E792B00A6004A /* NLNavControllerDelegate.swift */,
 				B1090D6C1D339F2E00EBD7F6 /* RealmHelper.swift */,
 			);
 			path = Helpers;
@@ -288,6 +291,7 @@
 			files = (
 				B1090D501D336E7000EBD7F6 /* ViewController.swift in Sources */,
 				B16106721D3771D50072CF87 /* Item.swift in Sources */,
+				B10EA8E01D4E792B00A6004A /* NLNavControllerDelegate.swift in Sources */,
 				B1067A7A1D37CC39006A2375 /* ItemTableViewCell.swift in Sources */,
 				B11E282D1D34914700C88663 /* ListListTableViewController.swift in Sources */,
 				B1090D6D1D339F2E00EBD7F6 /* RealmHelper.swift in Sources */,

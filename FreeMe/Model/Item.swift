@@ -11,9 +11,9 @@ import Foundation
 import RealmSwift
 import Realm
 
-
-enum Category: Int {
-    case Beverages = 1, Grains, Vegetables, CannedFood, Dairy, Baking, FrozenFood, Meat, Fruits, Toiletries, Seafood, DryFoods, Cleaning, BabyCare, Auto, Pets
+//FIX dictionary: how to use var category: String instead?
+enum Category: String {
+    case Beverages, Grains, Vegetables, CannedFood, Dairy, Baking, FrozenFood, Meat, Fruits, Toiletries, Seafood, DryFoods, Cleaning, BabyCare, Auto, Pets
 }
 
 class Item: Object {
@@ -21,15 +21,19 @@ class Item: Object {
     dynamic var name: String = ""
     dynamic var itemState: Bool = false
     var itemCategory: Category = .Beverages
-//var quantity: Int
-    dynamic var itemCount: Int = 0
+    //FIX dictionary: use new var category of type String?
+//    var category: String
+//    dynamic var itemCount: Int = 0
     
-    init(name: String, itemState: Bool, itemCategory: Category, count: Int) {
+    //FIX dictionary: add category into init function?
+    init(name: String, itemState: Bool, itemCategory: Category) {
         self.name = name
         self.itemState = itemState
         self.itemCategory = itemCategory
-//self.quantity = quantity
-        self.itemCount = count
+//FIX dictionary: init category?
+//        self.category = category
+//        self.itemCount = count
+        
         super.init()
     }
     
@@ -45,9 +49,7 @@ class Item: Object {
         super.init(value: value, schema: schema)
     }
     
-    func categoryNameForCategoryNum() -> String {
-        
-        let cat = self.itemCategory
+    class func categoryNameForCategoryNum(cat: Category) -> String {
         
         if cat == .Beverages {
             
@@ -102,11 +104,7 @@ class Item: Object {
         }
     }
     
-    
-    
-    func integerForCategory() -> Int {
-        
-        let cat = self.itemCategory
+    class func integerForCategory(cat: Category) -> Int {
         
         if cat == .Beverages {
             
@@ -159,6 +157,75 @@ class Item: Object {
         else {
             return 16
         }
+    }
+    
+    class func categoryForInteger(integer: Int) -> Category {
+        
+        if integer == 1 {
+            
+            return .Beverages
+        }
+        else if integer == 2 {
+            
+            return .Grains
+        }
+        else if integer == 3 {
+            
+            return .Vegetables
+        }
+        else if integer == 4 {
+            
+            return .CannedFood
+        }
+        else if integer == 5 {
+            
+            return .Dairy
+        }
+        else if integer == 6 {
+            
+            return .Baking
+        }
+        else if integer == 7 {
+            
+            return .FrozenFood
+        }
+        else if integer == 8 {
+            
+            return .Meat
+        }
+        else if integer == 9 {
+            
+            return .Fruits
+        }
+        else if integer == 10 {
+            
+            return .Toiletries
+        }
+        else if integer == 11 {
+            
+            return .Seafood
+        }
+        else if integer == 12 {
+            
+            return .DryFoods
+        }
+        else if integer == 13 {
+            
+            return .Cleaning
+        }
+        else if integer == 14 {
+            
+            return .BabyCare
+        }
+        else if integer == 15 {
+            
+            return .Auto
+        }
+        else {
+            
+            return .Pets
+        }
+        
     }
 
     

@@ -20,10 +20,11 @@ class CategoryCVCell: UICollectionViewCell {
 //            self.backgroundColor = selected ? UIColor.yellowColor() : UIColor.whiteColor()
             
             if selected{
+                
                 backgroundColor = UIColor(red: 76.0/255.0, green: 217.0/255.0, blue: 100.0/255.0, alpha: 1)
                 
             } else {
-                backgroundColor = UIColor.whiteColor()
+                backgroundColor = UIColor.clearColor()
             }
             
         }

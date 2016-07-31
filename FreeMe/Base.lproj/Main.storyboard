@@ -197,9 +197,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="groceries" translatesAutoresizingMaskIntoConstraints="NO" id="kqK-ML-RE9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oec-nY-Ikq">
                                 <rect key="frame" x="16" y="164" width="288" height="404"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="aYI-Q6-qYj"/>
                                 </constraints>
@@ -211,7 +214,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryIdentifier" id="qhO-mO-NHf" customClass="CategoryCVCell" customModule="FreeMe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -247,11 +250,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath=" _placeholderLabel.textColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks8-Vc-55u">
                                 <rect key="frame" x="16" y="109" width="0.0" height="0.0"/>
@@ -302,6 +300,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundImageView" destination="kqK-ML-RE9" id="pFJ-WH-5QH"/>
                         <outlet property="categoryCollectionView" destination="Oec-nY-Ikq" id="Syp-Tb-531"/>
                         <outlet property="errorLabel" destination="ks8-Vc-55u" id="pKl-1I-I5j"/>
                         <outlet property="listNameLabel" destination="jGo-Et-eWu" id="S0x-ZA-0Oc"/>
@@ -324,15 +323,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="YeQ-v9-73p" id="bHH-vh-5nx"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qDs-dz-VLw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmr-cw-PGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="YeQ-v9-73p" customClass="NLNavControllerDelegate" customModule="FreeMe" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="270" y="245"/>
         </scene>
     </scenes>
     <resources>
+        <image name="groceries" width="620" height="388"/>
         <image name="groceries1" width="2292" height="1524"/>
     </resources>
 </document>

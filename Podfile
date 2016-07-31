@@ -6,8 +6,7 @@ target 'FreeMe' do
   use_frameworks!
 
   # Pods for FreeMe
-pod 'RealmSwift'
-pod 'Parse'
-pod 'ParseUI'
+  pod 'RealmSwift'
+  pod 'FXBlurView'
 
 end

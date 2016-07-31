@@ -11,12 +11,13 @@ import Realm
 import RealmSwift
 
 class ItemTableViewCell: UITableViewCell {
-
     
     @IBOutlet weak var mySwitch: UISwitch!
     
 //by declaring this property, i am allowed to hold an instance of Item
-    var item: Item!
+    weak var item: Item!
+    weak var list: List!
+    weak var tableView: UITableView!
     
     func setBackgroundColor() {
         if mySwitch.on {
@@ -28,16 +29,34 @@ class ItemTableViewCell: UITableViewCell {
 
     }
     
-    
     @IBAction func switchClicked(sender: AnyObject) {
+        
         if mySwitch.on {
+            
+            if item == nil {
+                
+                print("problem!")
+            }
+            
+            print("item state true for \(item.name)")
             self.item.itemState = true
             contentView.backgroundColor = UIColor.lightGrayColor()
             //why not use cell.item.. because we ar already in the instance of itemtableVCell
-        }else {
+            
+        } else {
+            
+            if item == nil {
+                
+                print("problem!")
+            }
+            
+            print("item state false for \(item.name)")
             self.item.itemState = false
             contentView.backgroundColor = UIColor.init(red: 76.0/255.0, green: 217.0/255.0, blue: 100.0/255.0, alpha: 1)
         }
+        
+        list.updateList()
+        tableView.reloadData()
     }
     
     @IBOutlet weak var itemNameLabel: UILabel!

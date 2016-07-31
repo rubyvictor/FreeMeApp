@@ -16,14 +16,18 @@ class ListListTableViewController: UITableViewController {
     //add didSet here for reloadData() to solve the no-show on first add list.
     var lists: Results<List>? {
         didSet {
+            
+            for list in lists! {
+                
+                list.updateSelf()
+            }
+            
             self.tableView.reloadData()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        lists = RealmHelper.retrieveList()
         
 //        Initial Test Data
 //        let list1 = List()
@@ -53,6 +57,7 @@ class ListListTableViewController: UITableViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
+        
         lists = RealmHelper.retrieveList()
     }
     
@@ -70,6 +75,7 @@ class ListListTableViewController: UITableViewController {
         let row = indexPath.row
         
         let list = lists![row]
+        list.updateSelf()
         
         cell.listTitleLabel.text = list.title
         
@@ -78,7 +84,8 @@ class ListListTableViewController: UITableViewController {
         //call addItem func here
         //use interpolation to display quantity
         
-        cell.listNumberOfItemsLabel.text = "\(list.countItems()) items"
+//        cell.listNumberOfItemsLabel.text = "\(list.countItems()) items"
+        cell.listNumberOfItemsLabel.text = "\(list.itemArray.count) items"
         
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         
@@ -99,6 +106,7 @@ class ListListTableViewController: UITableViewController {
                 let indexPath = tableView.indexPathForSelectedRow!
                 
                 let list = lists![indexPath.row]
+                list.updateSelf()
                 
                 let displayListViewController = segue.destinationViewController as! DisplayListViewController
                 

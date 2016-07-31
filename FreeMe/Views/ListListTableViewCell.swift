@@ -13,6 +13,7 @@ import Realm
 
 
 class ListListTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var listTitleLabel: UILabel!
     @IBOutlet weak var listModificationTimeLabel: UILabel!
     @IBOutlet weak var listNumberOfItemsLabel: UILabel!

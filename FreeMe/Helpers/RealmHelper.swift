@@ -7,6 +7,7 @@
 
 
 import Foundation
+import Realm
 import RealmSwift
 
 class RealmHelper {
@@ -26,19 +27,31 @@ class RealmHelper {
             realm.delete(list)
         }
     }
-    static func updateList(listToBeUpdated: List, newDict: [String : [Item]]){
+    
+    static func updateList(listToBeUpdated: List, title: String, itemArrayString: String) {
         let realm = try! Realm()
         try! realm.write {
-            listToBeUpdated.listDict = newDict
-//            listToBeUpdated.arrayOfItems = .arrayOfItems
+            listToBeUpdated.title = title
+            listToBeUpdated.itemArrayString = itemArrayString
             listToBeUpdated.modificationTime = NSDate()
-            
-            
         }
     }
+    
+//    static func updateList(listToBeUpdated: List, newDict: [String : [Item]]){
+//        let realm = try! Realm()
+//        try! realm.write {
+//            
+////            listToBeUpdated.listDict = newDict
+////            listToBeUpdated.arrayOfItems = .arrayOfItems
+//            listToBeUpdated.modificationTime = NSDate()
+//            
+//            
+//        }
+//    }
     
     static func retrieveList() -> Results<List> {
         let realm = try! Realm()
         return realm.objects(List).sorted("modificationTime", ascending: false)
     }
-    }
+    
+}

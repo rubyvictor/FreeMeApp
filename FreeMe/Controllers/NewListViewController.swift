@@ -22,6 +22,8 @@ class NewListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: #selector(backTapped))
        }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +36,10 @@ class NewListViewController: UIViewController {
         super.touchesBegan(touches, withEvent: event)
     }
 
-    
+    func backTapped(sender: UIBarButtonItem) {
+        
+        self.navigationController?.popViewControllerAnimated(false)
+    }
     
 //    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return list.count
@@ -67,7 +72,7 @@ class NewListViewController: UIViewController {
         
 //        listListVC?.lists.append(newList)
         
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewControllerAnimated(false)
     }
     
     

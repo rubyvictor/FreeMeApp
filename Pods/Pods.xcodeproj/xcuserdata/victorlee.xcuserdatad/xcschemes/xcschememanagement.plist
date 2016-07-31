@@ -4,17 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Bolts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Parse.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ParseUI.xcscheme</key>
+		<key>FXBlurView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>138B79DA67AEE3FC3CC7AA7228B9EF61</key>
+		<key>29D382FC88ADDF8188F5C1FC8414CFC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C8AA1BAF35413BDB954A1DF93576ED1</key>
+		<key>2C8330C4917A2055BC50050032BA6548</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C035D24234FB8B41A097D9C7D0B49D4</key>
+		<key>9806E92CC0E55D8E29F792EF4771368E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96F6FC5F8BB76FEE9B0AA36468984709</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B272B33F162D6E5C3510BA50ECF2684B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E1F78B1C5F8F2CCD0E68552EAF2B9B52</key>
+		<key>CD378EDFF42487A7E1BB47D45223953B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

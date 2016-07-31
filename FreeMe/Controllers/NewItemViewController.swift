@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import Realm
+import FXBlurView
 
 class NewItemViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -20,18 +21,20 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var listNameLabel: UILabel!
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
     var arrayOfCategories: [NSDictionary] = []
     
-    var list: List?
+    weak var list: List?
     
     var selectedCategory: Int!
-    
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: #selector(backTapped))
+        
         
         nameTextField.attributedPlaceholder = NSAttributedString(string:"item name",
                                                                  attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
@@ -39,6 +42,9 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         listNameLabel.text = list?.title
+        
+        let blurredImage = backgroundImageView.image?.blurredImageWithRadius(8.0, iterations: 3, tintColor: UIColor.blackColor())
+        backgroundImageView.image = blurredImage
         
         let dict1 = NSMutableDictionary()
         dict1["categoryNum"] = NSNumber(integer: 1)
@@ -208,9 +214,9 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
             return
         }
         
+        let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Item.categoryForInteger(selectedCategory))
     
         //save to array and Realm
-        let newItem = Item(name: nameTextField.text!, itemState: false, itemCategory: Category(rawValue: selectedCategory)!, count: Int())
         
         list?.addNewItem(newItem)
         
@@ -231,6 +237,10 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         return false
     }
 
+    func backTapped(sender: UIBarButtonItem) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     /*
     // MARK: - Navigation
 
