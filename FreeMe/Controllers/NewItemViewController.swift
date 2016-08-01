@@ -43,7 +43,7 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         categoryCollectionView.dataSource = self
         listNameLabel.text = list?.title
         
-        let blurredImage = backgroundImageView.image?.blurredImageWithRadius(8.0, iterations: 3, tintColor: UIColor.blackColor())
+        let blurredImage = backgroundImageView.image?.blurredImageWithRadius(20.0, iterations: 3, tintColor: UIColor.blackColor())
         backgroundImageView.image = blurredImage
         
         let dict1 = NSMutableDictionary()

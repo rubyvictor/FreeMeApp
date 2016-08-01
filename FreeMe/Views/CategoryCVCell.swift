@@ -21,11 +21,13 @@ class CategoryCVCell: UICollectionViewCell {
             
             if selected{
                 
-                backgroundColor = UIColor(red: 76.0/255.0, green: 217.0/255.0, blue: 100.0/255.0, alpha: 1)
-                
-            } else {
+//                backgroundColor = UIColor(red: 76.0/255.0, green: 217.0/255.0, blue: 100.0/255.0, alpha: 1)
                 backgroundColor = UIColor.clearColor()
             }
+            
+//            } else {
+//                backgroundColor = UIColor.clearColor()
+//            }
             
         }
     }

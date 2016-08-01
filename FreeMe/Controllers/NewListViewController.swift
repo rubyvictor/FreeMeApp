@@ -12,6 +12,7 @@ import RealmSwift
 
 class NewListViewController: UIViewController {
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBOutlet weak var newListTitleTextField: UITextField!
     
@@ -22,6 +23,9 @@ class NewListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let blurredImage = backgroundImageView.image?.blurredImageWithRadius(40.0, iterations: 3, tintColor: UIColor.blackColor())
+        backgroundImageView.image = blurredImage
         
 //        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: #selector(backTapped))
        }
