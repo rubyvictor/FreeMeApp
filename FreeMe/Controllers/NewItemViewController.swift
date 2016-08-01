@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 import Realm
 import FXBlurView
+import Mixpanel
 
 class NewItemViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -35,6 +36,9 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Do any additional setup after loading the view.
 //        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: self, action: #selector(backTapped))
         
+        //Track open up new item view analytics using mixpanel
+        
+        Mixpanel.sharedInstance().track("goToAdditem")
         
         nameTextField.attributedPlaceholder = NSAttributedString(string:"item name",
                                                                  attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
@@ -220,8 +224,11 @@ class NewItemViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         list?.addNewItem(newItem)
         
+        
         //go back to previous screen
         self.navigationController?.popViewControllerAnimated(true)
+        //track analytics every time a new item added to the list
+        Mixpanel.sharedInstance().track("newItem")
     }
 
     //add new function to validate newItem input here

@@ -10,6 +10,8 @@
 import UIKit
 import Realm
 import RealmSwift
+import Mixpanel
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
 
+        let token = "6642b854339d577922e5154e6f70fe3b"
+        Mixpanel.sharedInstanceWithToken(token)
+        let mixpanel: Mixpanel = Mixpanel.sharedInstance()
+        mixpanel.track("FreeMeApp")
+        
         let navigationBarAppearance = UINavigationBar.appearance()
         
         navigationBarAppearance.tintColor = UIColor.whiteColor()

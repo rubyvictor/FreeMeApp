@@ -11,6 +11,7 @@ import Foundation
 import RealmSwift
 import Realm
 
+
 class ListListTableViewController: UITableViewController {
     
     //add didSet here for reloadData() to solve the no-show on first add list.
@@ -28,6 +29,8 @@ class ListListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //add mixpanel analytics here to track open up addlist screen
+        
         
 //        Initial Test Data
 //        let list1 = List()

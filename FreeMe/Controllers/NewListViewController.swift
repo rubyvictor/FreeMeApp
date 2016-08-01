@@ -9,6 +9,7 @@
 import UIKit
 import Realm
 import RealmSwift
+import Mixpanel
 
 class NewListViewController: UIViewController {
     
@@ -23,6 +24,8 @@ class NewListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Mixpanel.sharedInstance().track("goTolist")
         
         let blurredImage = backgroundImageView.image?.blurredImageWithRadius(20.0, iterations: 3, tintColor: UIColor.blackColor())
         backgroundImageView.image = blurredImage
@@ -77,6 +80,7 @@ class NewListViewController: UIViewController {
 //        listListVC?.lists.append(newList)
         
         self.navigationController?.popViewControllerAnimated(false)
+        Mixpanel.sharedInstance().track("newListAdded")
     }
     
     

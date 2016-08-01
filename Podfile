@@ -8,5 +8,6 @@ target 'FreeMe' do
   # Pods for FreeMe
   pod 'RealmSwift'
   pod 'FXBlurView'
+  pod ‘Mixpanel’
 
 end
