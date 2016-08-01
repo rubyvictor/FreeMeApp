@@ -137,9 +137,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groceries1" translatesAutoresizingMaskIntoConstraints="NO" id="kY8-BR-dLI" userLabel="Background Image View">
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groceries" translatesAutoresizingMaskIntoConstraints="NO" id="kY8-BR-dLI" userLabel="Background Image View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter title of list" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-Ei-D0q">
                                 <rect key="frame" x="20" y="94" width="280" height="30"/>
@@ -151,11 +150,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-PF-ytb">
                                 <rect key="frame" x="20" y="86" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tDd-Ei-D0q" firstAttribute="top" secondItem="gtd-CE-TH7" secondAttribute="bottom" constant="30" id="AXp-eA-vXg"/>
                             <constraint firstItem="tDd-Ei-D0q" firstAttribute="leading" secondItem="HPK-PF-ytb" secondAttribute="leading" id="DMK-4n-vju"/>
@@ -339,6 +337,5 @@
     </scenes>
     <resources>
         <image name="groceries" width="620" height="388"/>
-        <image name="groceries1" width="2292" height="1524"/>
     </resources>
 </document>
