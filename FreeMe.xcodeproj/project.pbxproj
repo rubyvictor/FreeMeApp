@@ -201,7 +201,7 @@
 				TargetAttributes = {
 					B1090D491D336E7000EBD7F6 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = E26925RH2T;
+						DevelopmentTeam = 6UCEJ3RKRF;
 					};
 				};
 			};
@@ -424,9 +424,9 @@
 				);
 				INFOPLIST_FILE = FreeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3Dlantis.Spekke.FreeMe;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Free-Me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "685cae10-4fd1-4411-bec9-9f4607f532f9";
 			};
 			name = Debug;
 		};
@@ -443,9 +443,9 @@
 				);
 				INFOPLIST_FILE = FreeMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3Dlantis.Spekke.FreeMe;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Free-Me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "685cae10-4fd1-4411-bec9-9f4607f532f9";
 			};
 			name = Release;
 		};
